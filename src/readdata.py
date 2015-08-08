@@ -1,2 +1,4 @@
 import MySQLdb 
 
+db = MySQLdb
+

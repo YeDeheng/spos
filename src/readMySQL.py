@@ -1,7 +1,7 @@
 # You have to install MySQLdb first
 import MySQLdb
 
-def readMySQL():
+def read():
 	db = MySQLdb.connect(host="localhost", # your host, usually localhost
 	                     user="root", # your username
 	                     passwd="ydh0114", # your password
@@ -12,9 +12,8 @@ def readMySQL():
 	cur = db.cursor() 
 
 	# Use all the SQL you like
-	cur.execute("SELECT * FROM posts where Id=18553292 or ParentId=18553292")
-
+	cur.execute("SELECT Body FROM posts where Id=18553292")
+	return cur.fetchall()
 	# print all the first cell of all the rows
 	#for row in cur.fetchall() :
 	#    print row[0]
-

@@ -1,0 +1,40 @@
+============================================================================
+    Twitter Tokenizer 
+    Copyright (C) 2011
+    Original version by Brendan O'Connor.  Modified by Kevin Gimpel and Daniel Mills. 
+    Language Technologies Institute, Carnegie Mellon University
+    http://www.ark.cs.cmu.edu/TweetNLP
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+=============================================================================
+
+    This is a tokenizer for tweets, based on Brendan O'Connor's tokenizer 
+    (available at http://github.com/brendano/tweetmotif), modified to handle 
+    additional emoticons and avoid splitting contractions and possessives for 
+    part-of-speech tagging.
+
+    Usage is :
+       python tokenize.py <input file> <output file>
+
+    The input file should be in plaintext format, one tweet per line.
+    The output file will contain the tokenized version of each tweet on its own line.
+
+    For testing, a sample input and expected output file have been included.
+    To test, run the following :
+       python tokenize.py sample-input.txt my-output.txt
+    the file my-output.txt should be identical to sample-output.txt.
+
+    Works with Python2.5 or above.
+
+    Please contact Kevin Gimpel (kgimpel@cs.cmu.edu) with any questions about this release.

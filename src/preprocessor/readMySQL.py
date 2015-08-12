@@ -1,7 +1,7 @@
 # You have to install MySQLdb first
 import MySQLdb
 
-def read():
+def read(question_id):
 	db = MySQLdb.connect(host="localhost", # your host, usually localhost
 	                     user="root", # your username
 	                     passwd="ydh0114", # your password

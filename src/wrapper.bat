@@ -5,6 +5,7 @@
 
 java -mx300m -cp "stanford_tagger\stanford-postagger-3.5.2.jar;" ^
 edu.stanford.nlp.tagger.maxent.MaxentTagger ^
--sentenceDelimiter newline -tokenize false ^
+-sentenceDelimiter newline ^
+-tokenized ^
 -model stanford_tagger\models\wsj-0-18-left3words-distsim.tagger ^
 -textFile input2tagger.txt > pretag.txt

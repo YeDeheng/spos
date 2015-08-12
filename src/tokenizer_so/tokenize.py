@@ -1,6 +1,6 @@
 """ Wrapper for twitter tokenizer. See README for usage instruction"""
 """Kevin Gimpel (kgimpel@cs.cmu.edu)"""
-
+import sys,os
 import lib.twokenize
 
 def tokenize(istring,ostring):
@@ -14,9 +14,9 @@ def tokenize(istring,ostring):
   ofile.close()
   ifile.close()
 
-# if __name__=='__main__':
-#   try:
-#     tokenize(*sys.argv[1:])
-#   except TypeError: 
-#     print "Usage : python tokenize.py <input file> <output file>"
-#     print "See README for input file format"
+if __name__=='__main__':
+  try:
+    tokenize(*sys.argv[1:])
+  except TypeError: 
+    print "Usage : python tokenize.py <input file> <output file>"
+    print "See README for input file format"

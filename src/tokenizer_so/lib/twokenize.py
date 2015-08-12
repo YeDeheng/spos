@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
-""" tokenizer for tweets!  might be appropriate for other social media dialects too.
+""" 
+This is a tokenizer for programming-specific or software-specific texts in Stack Overflow. 
+Such text is both social, e.g., people use ungrammatical and informal language in comments, 
+and domain-specific, e.g., printf() should be recognized as one token rather than 3 tokens printf, '(' and ')'.
+
+Acknowledgement goes to Brendan O'Connor, Kevin Gimpel and Daniel Mills, 
+who are the authors of a Twitter tokenizer. This tokenizer modifies their Twitter one. 
+
+
 general philosophy is to throw as little out as possible.
 development philosophy: every time you change a rule, do a diff of this
 program's output on ~100k tweets.  if you iterate through many possible rules
@@ -7,8 +15,6 @@ and only accept the ones that seeem to result in good diffs, it's a sort of
 statistical learning with in-the-loop human evaluation :)
 """
 
-__author__="Brendan O'Connor (brenocon.com, brenocon@gmail.com)" 
-"Modified for part-of-speech tagging by Kevin Gimpel (kgimpel@cs.cmu.edu) and Daniel Mills (dpmills@cs.cmu.edu)"
 
 import re,sys
 import emoticons

@@ -8,7 +8,9 @@ def replace_tagset(text, dic):
 # our text the replacement will take place
 my_text = '_abd_abd everybody.'
  
-# our dictionary with our key:values.
+# dictionary with key:values.
+# key is PTB tagset used by Stanford Tagger
+# value is our own tagset 
 REPS = {'_NN ' : '_N ',
 		'_NNS ' : '_N ',
 
@@ -43,17 +45,15 @@ REPS = {'_NN ' : '_N ',
 
 		'_CD ' : '_$ ', 
 
+		'_. ' : '_, ', 
+		'_: ' : '_, ',
+ 
 		'_FW ' : '_G ', 
 		'_POS ' : '_G ', 
 		'_SYM ' : '_G ', 
 		'_LS ' : '_G '
 		}
  
-# bind the returned text of the method
-# to a variable and print it
-txt = replace_tagset(my_text, REPS)
-print txt, my_text  # it prints '|-|3ll0 3v3ryb0dy'
-
 infile = open('pretag.txt', 'r')
 outfile = open('maptag.txt', 'w')
 for line in infile: 

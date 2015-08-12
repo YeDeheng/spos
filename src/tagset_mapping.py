@@ -61,9 +61,11 @@ for line in infile:
 infile.close()
 outfile.close()
 
-infile = open('lingfeng-out.txt', 'r')
-outfile = open('lingfeng-map.txt', 'w')
-for line in infile: 
-	outfile.write(replace_tagset(line, REPS))
-infile.close()
-outfile.close()
+names = ['lingfeng', 'lijing', 'xuejiao', 'gaosa', 'chunyang', 'zhenchang', 'prakash']
+for name in names: 
+	infile = open(name+'-out.txt', 'r')
+	outfile = open(name+'-map.txt', 'w')
+	for line in infile: 
+		outfile.write(replace_tagset(line, REPS))
+	infile.close()
+	outfile.close()

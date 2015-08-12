@@ -163,8 +163,7 @@ plus	N
 Thanks	N
 in	N
 advance	N
-!
-
+!	N
 Actually	N
 ,	N
 you	N
@@ -252,5 +251,4 @@ the	N
 example	N
 app	N
 at	N
-github.com/jhipster/jhipster-sample-app
-
+github.com/jhipster/jhipster-sample-app	N

@@ -1,24 +1,7 @@
-# You have to install MySQLdb first
+# -*- coding: utf-8 -*-
+
 import MySQLdb
 from HTMLParser import HTMLParser
-
-def read(question_id):
-	db = MySQLdb.connect(host="localhost", # your host, usually localhost
-	                     user="root", # your username
-	                     passwd="ydh0114", # your password
-	                     db="stackoverflow201503") # name of the data base
-
-	# you must create a Cursor object. It will let
-	#  you execute all the queries you need
-	cur = db.cursor() 
-
-	# Use all the SQL you like
-	cur.execute("SELECT Body FROM posts where Id=%s or ParentId=%s" %(question_id, question_id))
-	#print cur.fetchall()
-	return cur.fetchall()
-	# print all the first cell of all the rows
-	#for row in cur.fetchall() :
-	#    print row[0]
 
 class MLStripper(HTMLParser):
     def __init__(self):
@@ -36,11 +19,59 @@ def strip_tags(html):
     return s.get_data()
 
 
+def read_post(post_id):
+	db = MySQLdb.connect(host="localhost", 
+	                     user="root", 
+	                     passwd="ydh0114", 
+	                     db="stackoverflow201503")
+	cur = db.cursor() 
+	cur.execute("SELECT Title FROM posts where Id=%s" % (post_id))
+	title = cur.fetchall()
 
-f = open("lingfeng.txt", "w")
-# remove HTML tags
-for row in read(15406977) :
-	input_POSTagger = strip_tags(row[0])
-	print input_POSTagger
-	f.write(input_POSTagger)
-f.close()
+	cur.execute("SELECT Body FROM posts where Id=%s" %(post_id))
+	body = cur.fetchall()
+	cur.execute("SELECT Text FROM comments where PostId=%s" % (post_id))
+	comments = cur.fetchall()
+
+	all = title + body + comments 
+
+	f = open('out.txt', 'w')
+	for row in all: 
+		f.write(strip_tags(row[0])+'\n')
+	f.close()
+
+	return all
+
+def read_knowledge_unit(question_id):
+	db = MySQLdb.connect(host="localhost", 
+	                     user="root", 
+	                     passwd="ydh0114", 
+	                     db="stackoverflow201503")
+	cur = db.cursor() 
+	cur.execute("SELECT Title FROM posts where Id=%s" % (question_id))
+	title = cur.fetchall()
+
+	cur.execute("SELECT Body FROM posts where Id=%s" %(question_id))
+	body = cur.fetchall()
+	cur.execute("SELECT Text FROM comments where PostId=%s" % (question_id))
+	comments = cur.fetchall()
+
+	all = title + body + comments 
+
+	cur.execute("SELECT Id FROM posts where ParentId=%s" %(question_id))
+	answers = cur.fetchall()
+	for row in answers:
+		answer_id = row[0]
+		cur.execute("SELECT Body FROM posts where Id=%s" %(answer_id))
+		ans_body = cur.fetchall()
+		all += ans_body
+		
+		cur.execute("SELECT Text FROM comments where PostId=%s" %(answer_id))
+		ans_comments = cur.fetchall()
+		all += ans_comments
+
+	return all
+
+
+for row in read_post(1447407):
+	print row[0]

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import MySQLdb
+import re
 from HTMLParser import HTMLParser
 
 class MLStripper(HTMLParser):
@@ -15,8 +16,10 @@ class MLStripper(HTMLParser):
 
 def strip_tags(html):
     s = MLStripper()
+    html = re.sub(r'<pre><code>.*?</code></pre>', '', html)
     s.feed(html)
     return s.get_data()
+
 
 
 def read_post(post_id):
@@ -33,7 +36,10 @@ def read_post(post_id):
 	cur.execute("SELECT Text FROM comments where PostId=%s" % (post_id))
 	comments = cur.fetchall()
 
-	all = title + body + comments 
+	if title[0][0] is None:
+		all = body + comments
+	else: 
+		all = title + body + comments 
 
 	f = open('out.txt', 'w')
 	for row in all: 
@@ -56,7 +62,10 @@ def read_knowledge_unit(question_id):
 	cur.execute("SELECT Text FROM comments where PostId=%s" % (question_id))
 	comments = cur.fetchall()
 
-	all = title + body + comments 
+	if title[0][0] is None:
+		all = body + comments
+	else: 
+		all = title + body + comments 
 
 	cur.execute("SELECT Id FROM posts where ParentId=%s" %(question_id))
 	answers = cur.fetchall()
@@ -70,8 +79,11 @@ def read_knowledge_unit(question_id):
 		ans_comments = cur.fetchall()
 		all += ans_comments
 
+	f = open('out.txt', 'w')
+	for row in all: 
+		f.write(strip_tags(row[0])+'\n')
 	return all
 
 
-for row in read_post(1447407):
+for row in read_knowledge_unit(797115):
 	print row[0]

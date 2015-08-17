@@ -34,7 +34,7 @@ def optional(r):
 PunctChars = r'''['“".?!,:;]'''
 foo = r'''foo'''
 Punct = '%s+' % PunctChars
-punctSeq   = "['\"“”‘’]+|[.?!,…]+|[:;]+"
+punctSeq   = regex_or(r'['"“”‘’]+', r'[.?!,…]+', r'[:;]+')
 Entity = '&(amp|lt|gt|quot);'
 
 # one-liner URL recognition:

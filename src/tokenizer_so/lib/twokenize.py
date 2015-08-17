@@ -217,6 +217,8 @@ EdgePunct      = r"""[  ' " “ ” ‘ ’ * « » { } ( \) [ \]  ]""".replace(
 #NotEdgePunct = r"""[^'"([\)\]]"""  # alignment failures?
 NotEdgePunct = r"""[a-zA-Z0-9]"""
 EdgePunctLeft  = r"""(\s|^)(%s+)(%s)""" % (EdgePunct, NotEdgePunct)
+
+# programming API suffixes () are considered
 EdgePunctRight =   r"""(%s\(\))(%s+)(\s|$)""" % (NotEdgePunct, EdgePunct)
 EdgePunctLeft_RE = mycompile(EdgePunctLeft)
 EdgePunctRight_RE= mycompile(EdgePunctRight)

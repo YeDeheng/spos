@@ -34,6 +34,7 @@ def optional(r):
 PunctChars = r'''['“".?!,:;]'''
 foo = r'''foo'''
 Punct = '%s+' % PunctChars
+punctSeq   = "['\"“”‘’]+|[.?!,…]+|[:;]+"
 Entity = '&(amp|lt|gt|quot);'
 
 # one-liner URL recognition:
@@ -99,7 +100,7 @@ ProtectThese = [
     Timelike,
     NumNum,
     NumberWithCommas,
-    Punct,
+    punctSeq,
     ArbitraryAbbrev,
     Separators,
     Decorations,

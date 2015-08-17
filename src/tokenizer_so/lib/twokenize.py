@@ -59,6 +59,9 @@ Email = EmailName + "@" + EmailDomain
 
 Email_RE = mycompile(Email)
 
+API = regex_or(r'((\w+)\.)+\w+\(\)', r'\w+\(\)', r'((\w+)\.)+(\w+)', )
+API_RE = mycompile(API)
+
 Timelike = r'\d+:\d+'
 NumNum = r'\d+\.\d+'
 NumberWithCommas = r'(\d+,)+?\d{3}' + pos_lookahead(regex_or('[^,]','$'))
@@ -100,7 +103,8 @@ ProtectThese = [
     ArbitraryAbbrev,
     Separators,
     Decorations,
-    EmbeddedApostrophe
+    EmbeddedApostrophe,
+    API
 ]
 Protect_RE = mycompile(regex_or(*ProtectThese))
 
@@ -169,7 +173,7 @@ def simple_tokenize(text):
   i = 0
   if Protect_RE.search(s):
     for m in Protect_RE.finditer(s):
-      goods.append( (i,m.start()) )
+      goods.append( (i, m.start()) )
       bads.append(m.span())
       i = m.end()
     goods.append( (m.end(), len(s)) )

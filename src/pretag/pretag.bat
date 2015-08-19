@@ -1,8 +1,10 @@
-set root = .
-echo %root%
+SET root=.
+ECHO %root%
 
+:: %1% : <input file>
+:: %2% : <output file>
 
-java -Xmx2g -Xms2g -jar .\classes\posTagTwitter.jar ^
+java -Xmx2g -Xms2g -jar %root%\classes\posTagTwitter.jar ^
       edu.cmu.cs.lti.ark.ssl.pos.SemiSupervisedPOSTagger ^
       --trainOrTest test ^
       --testSet %1% ^
@@ -17,8 +19,8 @@ java -Xmx2g -Xms2g -jar .\classes\posTagTwitter.jar ^
       --initialWeightsUpper 0.01 ^
       --iters 1000 ^
       --printRate 100 ^
-      --runOutput %2% ^
-      --execPoolDir tmp ^
-      --modelFile .\model\twitter_crf.model ^
+      --runOutput %root%\%2% ^
+      --execPoolDir %root%\tmp ^
+      --modelFile %root%\model\twitter_crf.model ^
       --useDistSim ^
       --useNames

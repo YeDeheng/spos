@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import sys,os
 import MySQLdb
 import re
 from HTMLParser import HTMLParser
@@ -48,7 +49,8 @@ def read_post(post_id):
 
 	return all
 
-def read_knowledge_unit(question_id):
+def read_knowledge_unit(istring, ostring):
+	question_id = istring
 	db = MySQLdb.connect(host="localhost", 
 	                     user="root", 
 	                     passwd="ydh0114", 
@@ -79,11 +81,18 @@ def read_knowledge_unit(question_id):
 		ans_comments = cur.fetchall()
 		all += ans_comments
 
-	f = open('out.txt', 'w')
+	f = open(ostring, 'w')
 	for row in all: 
 		f.write(strip_tags(row[0])+'\n')
 	return all
 
 
-for row in read_knowledge_unit(1447407):
-	print row[0]
+if __name__ ==  '__main__':
+	try:
+		read_knowledge_unit(*sys.argv[1:])
+	except TypeError:
+		print "Usage : python readSQL.py <question_id> <output file>"
+
+
+#for row in read_knowledge_unit(1447407):
+#	print row[0]

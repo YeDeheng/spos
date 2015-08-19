@@ -31,10 +31,10 @@ def neg_lookahead(r):
 def optional(r):
   return '(%s)?' % r
 
-PunctChars = r'''['“".?!,:;]'''
+PunctChars = r'''['“".?!,(/:;]'''
 foo = r'''foo'''
 Punct = '%s+' % PunctChars
-punctSeq   = regex_or(r'['"“”‘’]+', r'[.?!,…]+', r'[:;]+')
+PunctSeq = r"""['\"“”‘’]+|[.?!,…]+|[:;]+"""
 Entity = '&(amp|lt|gt|quot);'
 
 # one-liner URL recognition:
@@ -46,7 +46,7 @@ CommonTLDs = regex_or('com','co\\.uk','org','net','info','ca','edu','gov')
 UrlStart2 = r'[a-z0-9\.-]+?' + r'\.' + CommonTLDs + pos_lookahead(r'[/ \W\b]')
 UrlBody = r'[^ \t\r\n<>]*?'  # * not + for case of:  "go to bla.com." -- don't want period
 UrlExtraCrapBeforeEnd = '%s+?' % regex_or(PunctChars, Entity)
-UrlEnd = regex_or( r'\.\.+', r'[<>]', r'\s', '$')
+UrlEnd = regex_or( r'\.\.+', r'[<>]', r'\s', '$') # / added by Deheng
 Url = (r'\b' + 
     regex_or(UrlStart1, UrlStart2) + 
     UrlBody + 
@@ -60,8 +60,10 @@ Email = EmailName + "@" + EmailDomain
 
 Email_RE = mycompile(Email)
 
-API = regex_or(r'((\w+)\.)+\w+\(\)', r'\w+\(\)', r'((\w+)\.)+(\w+)', )
+API = regex_or(r'((\w+)\.)+\w+\(\)', r'\w+\(\)', r'((\w+)\.)+(\w+)')
 API_RE = mycompile(API)
+plural = r'\w+\(s\)'
+plural_RE = mycompile(plural)
 
 Timelike = r'\d+:\d+'
 NumNum = r'\d+\.\d+'
@@ -84,7 +86,7 @@ assert '-' != '―'
 Separators = regex_or('--+', '―')
 Decorations = r' [  ♫   ]+ '.replace(' ','')
 
-EmbeddedApostrophe = r"\S+'\S+"
+EmbeddedApostrophe = r"\S+'\w+"  # \S -> \w, by Deheng
 
 Hashtag = r'#[a-zA-Z0-9_]+'
 
@@ -100,12 +102,13 @@ ProtectThese = [
     Timelike,
     NumNum,
     NumberWithCommas,
-    punctSeq,
     ArbitraryAbbrev,
     Separators,
     Decorations,
     EmbeddedApostrophe,
-    API
+    API,
+    PunctSeq,  # Deheng
+    plural  # Deheng
 ]
 Protect_RE = mycompile(regex_or(*ProtectThese))
 
@@ -161,6 +164,7 @@ def tokenize(tweet):
   t += simple_tokenize(text)
   t.text = text
   t.alignments = align(t, text)
+  print t
   return t
 
 def simple_tokenize(text):
@@ -184,15 +188,15 @@ def simple_tokenize(text):
 
   goods = [s[i:j] for i,j in goods]
   bads  = [s[i:j] for i,j in bads]
-  #print goods
-  #print bads
+  print goods
+  print bads
   goods = [unprotected_tokenize(x) for x in goods]
   res = []
   for i in range(len(bads)):
     res += goods[i]
     res.append(bads[i])
   res += goods[-1]
-
+  print res
   #res = post_process(res)
   return res
 
@@ -224,7 +228,7 @@ NotEdgePunct = r"""[a-zA-Z0-9]"""
 EdgePunctLeft  = r"""(\s|^)(%s+)(%s)""" % (EdgePunct, NotEdgePunct)
 
 # programming API suffixes () are considered
-EdgePunctRight =   r"""(%s(?:\(\))?)(%s+)(\s|$)""" % (NotEdgePunct, EdgePunct)
+EdgePunctRight =   r"""(%s(?:\(s?\))?)(%s*)(\s|$)""" % (NotEdgePunct, EdgePunct)
 EdgePunctLeft_RE = mycompile(EdgePunctLeft)
 EdgePunctRight_RE= mycompile(EdgePunctRight)
 

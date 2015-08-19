@@ -34,7 +34,7 @@ def optional(r):
 PunctChars = r'''['“".?!,(/:;]'''
 foo = r'''foo'''
 Punct = '%s+' % PunctChars
-PunctSeq = r"""['\"“”‘’]+|[.?!,…]+|[:;]+"""
+PunctSeq = r"""['\"“”‘’)]+|[.?!,…]+|[:;/(]+"""
 Entity = '&(amp|lt|gt|quot);'
 
 # one-liner URL recognition:
@@ -64,6 +64,7 @@ API = regex_or(r'((\w+)\.)+\w+\(\)', r'\w+\(\)', r'((\w+)\.)+(\w+)')
 API_RE = mycompile(API)
 plural = r'\w+\(s\)'
 plural_RE = mycompile(plural)
+Concat = r'\w+[/—]\w+'
 
 Timelike = r'\d+:\d+'
 NumNum = r'\d+\.\d+'
@@ -164,7 +165,6 @@ def tokenize(tweet):
   t += simple_tokenize(text)
   t.text = text
   t.alignments = align(t, text)
-  print t
   return t
 
 def simple_tokenize(text):
@@ -188,15 +188,14 @@ def simple_tokenize(text):
 
   goods = [s[i:j] for i,j in goods]
   bads  = [s[i:j] for i,j in bads]
-  print goods
-  print bads
+  # print goods
+  # print bads
   goods = [unprotected_tokenize(x) for x in goods]
   res = []
   for i in range(len(bads)):
     res += goods[i]
     res.append(bads[i])
   res += goods[-1]
-  print res
   #res = post_process(res)
   return res
 
@@ -234,9 +233,9 @@ EdgePunctRight_RE= mycompile(EdgePunctRight)
 
 def edge_punct_munge(s):
   s = EdgePunctLeft_RE.sub( r"\1\2 \3", s)
-  print s
+  #print s
   s = EdgePunctRight_RE.sub(r"\1 \2\3", s)
-  print s
+  #print s
   return s
 
 

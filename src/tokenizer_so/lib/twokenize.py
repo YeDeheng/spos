@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-""" 
-This is a tokenizer for programming-specific or software-specific texts in Stack Overflow. 
-Such text is both social, e.g., people use ungrammatical and informal language in comments, 
+"""
+This is a tokenizer for programming-specific or software-specific texts in Stack Overflow.
+Such text is both social, e.g., people use ungrammatical and informal language in comments,
 and domain-specific, e.g., printf() should be recognized as one token rather than 3 tokens printf, '(' and ')'.
 
-Acknowledgement goes to Brendan O'Connor, Kevin Gimpel and Daniel Mills, 
-who are the authors of a Twitter tokenizer. This tokenizer modifies their Twitter one. 
+Acknowledgement goes to Brendan O'Connor, Kevin Gimpel and Daniel Mills,
+who are the authors of a Twitter tokenizer. This tokenizer modifies their Twitter one.
 
 
 general philosophy is to throw as little out as possible.
@@ -47,9 +47,9 @@ UrlStart2 = r'[a-z0-9\.-]+?' + r'\.' + CommonTLDs + pos_lookahead(r'[/ \W\b]')
 UrlBody = r'[^ \t\r\n<>]*?'  # * not + for case of:  "go to bla.com." -- don't want period
 UrlExtraCrapBeforeEnd = '%s+?' % regex_or(PunctChars, Entity)
 UrlEnd = regex_or( r'\.\.+', r'[<>]', r'\s', '$') # / added by Deheng
-Url = (r'\b' + 
-    regex_or(UrlStart1, UrlStart2) + 
-    UrlBody + 
+Url = (r'\b' +
+    regex_or(UrlStart1, UrlStart2) +
+    UrlBody +
     pos_lookahead( optional(UrlExtraCrapBeforeEnd) + UrlEnd))
 
 Url_RE = re.compile("(%s)" % Url, re.U|re.I)
@@ -155,11 +155,15 @@ def unicodify(s, encoding='utf8', *args):
 
 def tokenize(tweet):
   text = unicodify(tweet)
+
   text = squeeze_whitespace(text)
   # Convert HTML escape sequences into their actual characters (so that the tokenizer and emoticon finder are not fooled).
   text = re.sub(r'&lt;', '<', text)
   text = re.sub(r'&gt;', '>', text)
   text = re.sub(r'&amp;', '&', text)
+
+  text = re.sub(u'—', ' ', text) # Deheng
+  text = re.sub('(?<=\w)/(?=\s+)', ' ', text)
 
   t = Tokenization()
   t += simple_tokenize(text)

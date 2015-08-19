@@ -1,1 +1,2 @@
-thread.sleep() pr.intf()
+thread . sleep()
+).

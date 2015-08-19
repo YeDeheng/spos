@@ -1,1 +1,28 @@
-printf() a.k.a love you.who you are 
+What's the equivalent of Java's Thread.sleep() in Javascript?
+What's the equivalent of Java's  Thread.sleep()  in Javascript?
+You can either write a spin loop (a loop that just loops for a long period of time performing some sort of computation to delay the function) or use: This will call 'Func1()' after 3 seconds. Edit: Credit goes to the commenters, but you can pass anonymous functions to setTimeout. This is much more efficient and does not invoke javascript's eval function.
+I want the current thread to go for waiting state for specified number of seconds
+Spinning a loop cause High CPU utilization.
+I'd prefer to provide the function directly as an argument instead of quoting the function name: setTimeout( function() { ... }, 3000 );
+You should *never* quote the first parameter for setTimeout—pass an anonymous function or a function reference. The corrected version is: setTimeout(Func1, 3000);
+(Quoting the first parameter of setTimeout invokes "eval()" unnecessarily.)
+@Steve, if you want to pass any parameters to the method, you really don't have that option, you must quote.
+What's the downside of quoting the first parameter?  It essentially executes whatever's in that block...  is it a matter of style or are there other considerations?
+@Nick: No, if you want to pass parameters, you use a closure.
+Ah, nevermind, missed your later comment.  Thanks Steve.
+@Nick: Daniel is correct—you wrap the code in an anonymous function.
+There's no direct equivalent, as it'd pause a webpage.  However there is a  setTimeout() , e.g.: Closure example (thanks Daniel): The second argument is milliseconds before firing, you can use this for time events or waiting before performing an operation. Edit:   Updated based on comments for a cleaner result.
+Again, *never* quote the first parameter of setTimeout. See my comments on Malaxeur's answer for more info.
+The simple answer is that there is no such function. The closest thing you have is: Note that you  especially  don't want to busy-wait (e.g. in a spin loop), since your browser is almost certainly executing your JavaScript in a single-threaded environment. Here are a couple of other SO questions that deal with threads in JavaScript: http://stackoverflow.com/questions/30036/javascript-and-threads http://stackoverflow.com/questions/39879/why-doesnt-javascript-support-multithreading And this question may also be helpful: http://stackoverflow.com/questions/797115/javascript-settimeout-without-putting-code-into-a-string
+(+1) look at setTimeout() and setInterval() in javascript
+To promote good coding practices, it might be best to insert a semi-colon after "500" and initialise "millisecondsToWait" in the code sample (e.g. by preceding it with "var ") (this way, if someone copies and pastes the sample, they won't end up with an implied global).
+Good catch, Steve.  I've edited my answer to reflect your comments.
+ES6 will have a new operator `yield` which can be used to "simulate" threads. See http://taskjs.org/ for an example library.
+Or maybe you can use the setInterval function, to call a particular function, after the specified number of milliseconds. Just do a google for the setInterval prototype.I don't quite recollect it.
+Try with this code. I hope it's useful for you.
+does exactly what it is supposed to
+This doesn't put the thread to sleep, it just consumes the thread with wasteful calculation that is likely to block the UI. Not recommended.
+That's a "busy wait" a.k.a you are "burning the thread"
+For my unit testing purposes its useful. Surely, not for production.
+This eventually helped me:
+setTimeout was already mentioned a looong time ago. and the rest of the code has nothing to do with the question.

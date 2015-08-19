@@ -1,0 +1,1 @@
+You should *never* quote the first parameter for setTimeout—p伟大

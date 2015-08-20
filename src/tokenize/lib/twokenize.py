@@ -64,7 +64,7 @@ API = regex_or(r'((\w+)\.)+\w+\(\)', r'\w+\(\)', r'((\w+)\.)+(\w+)')
 API_RE = mycompile(API)
 plural = r'\w+\(s\)'
 plural_RE = mycompile(plural)
-
+Concat = r'\w+[/—]\w+'
 
 Timelike = r'\d+:\d+'
 NumNum = r'\d+\.\d+'

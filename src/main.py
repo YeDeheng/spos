@@ -1,23 +1,26 @@
-from preprocessor import readMySQL, removeHTML
-from tokenizer_so import tokenize
+# -*- coding: utf-8 -*-
+
+from get_data import readSQL
+from tokenize import tokenize
 
 import sys,os
 
-# read the body of the post
-body_array = readMySQL.read()
 
-f = open("input_raw.txt", "w")
-# remove HTML tags
-for row in body_array :
-	input_POSTagger = removeHTML.strip_tags(row[0])
-	f.write(input_POSTagger)
-f.close()
-#print input_POSTagger
+def wrapper(istring, ostring):
+	q_id = istring
+	q_raw_content = q_id + '-raw.txt'
+	q_tokenize = q_id + '-tokenized.txt'
+	q_pretag = q_id + '-pretagged.txt'
+
+	readSQL.read_knowledge_unit(q_id, q_raw_content)
+	
+	tokenize.tokenize(q_raw_content, q_tokenize)
+
 
 
 if __name__=='__main__':
-  try:
-    tokenize.tokenize(*sys.argv[1:])
-  except TypeError: 
-    print "Usage : python tokenize.py <input file> <output file>"
-    print "See README for input file format"
+	try:
+		#wrapper(*sys.argv[1:])
+		wrapper('1447407', 'out.txt')
+	except TypeError: 
+		print "Usage : python tokenize.py <input file> <output file>"

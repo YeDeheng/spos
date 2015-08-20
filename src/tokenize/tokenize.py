@@ -1,5 +1,4 @@
-""" Wrapper for twitter tokenizer. See README for usage instruction"""
-"""Kevin Gimpel (kgimpel@cs.cmu.edu)"""
+# -*- coding: utf-8 -*-
 
 import sys,os
 import lib.twokenize

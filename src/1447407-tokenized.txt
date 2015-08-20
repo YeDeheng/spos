@@ -1,0 +1,6 @@
+What's the equivalent of Java's Thread.sleep() in Javascript ?
+What's the equivalent of Java's Thread.sleep() in Javascript ?
+You can either write a spin loop ( a loop that just loops for a long period of time performing some sort of computation to delay the function ) or use : This will call ' Func1() ' after 3 seconds . Edit : Credit goes to the commenters , but you can pass anonymous functions to setTimeout . This is much more efficient and does not invoke javascript's eval function .
+I want the current thread to go for waiting state for specified number of seconds
+Spinning a loop cause High CPU utilization .
+I'd prefer to provide the function directly as an argument instead of quoting the function name : setTimeout ( function() { ... } , 3000 );

@@ -1,4 +1,5 @@
 import sys,os
+import re
 
 def transformoutput(id, istring, ostring):
   ifile=open(istring,'r')
@@ -11,6 +12,8 @@ def transformoutput(id, istring, ostring):
       token += tokens[0] + ' '
       tag += tokens[1] + ' '
     else:
+      token = re.sub(' $', '', token)
+      tag = re.sub(' $', '', tag)
       ofile.write(id + '\t' + token + '\t' + tag + '\n')
       token = ''
       tag = ''

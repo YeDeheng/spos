@@ -5,6 +5,10 @@ import MySQLdb
 import re
 from HTMLParser import HTMLParser
 
+import codecs
+codecs.register_error('replace_against_space', lambda e: (u' ',e.start + 1))
+#print unicode('ABC\x97ab\x99c上午', 'utf-8', errors='replace_against_space')
+
 class MLStripper(HTMLParser):
     def __init__(self):
         self.reset()
@@ -80,10 +84,14 @@ def read_knowledge_unit(istring, ostring):
 		cur.execute("SELECT Text FROM comments where PostId=%s" %(answer_id))
 		ans_comments = cur.fetchall()
 		all += ans_comments
-
+	#print all
 	f = open(ostring, 'w')
 	for row in all: 
-		f.write(strip_tags(row[0])+'\n')
+		#print strip_tags(row[0])
+		uni = unicode(strip_tags(row[0]), 'utf-8', errors='replace_against_space') # excellent answer from Stack Overflow
+		#print unicode(strip_tags(row[0]).decode('utf-8', 'ignore').encode('utf-8'), 'utf-8')
+		#f.write(uni.encode('utf-8') + '\n') 
+		f.write(uni + '\n')
 	return all
 
 

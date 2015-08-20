@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-
 import sys,os
 import lib.twokenize
+
 
 def tokenize(istring,ostring):
   ifile=open(istring,'r')

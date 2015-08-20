@@ -154,6 +154,8 @@ def unicodify(s, encoding='utf8', *args):
   return unicode(s)
 
 def tokenize(tweet):
+  #tweet = re.sub(u'—', ' ', tweet) # Deheng
+  #tweet = tweet.replace('\x97', ' ') # Deheng
   text = unicodify(tweet)
 
   text = squeeze_whitespace(text)

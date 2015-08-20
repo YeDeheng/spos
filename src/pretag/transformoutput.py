@@ -28,4 +28,4 @@ if __name__=='__main__':
     transformoutput('123','sample-output.txt','asdfasfas.txt')
     #transforminput(*sys.argv[1:])
   except TypeError:
-    print "Usage : python transforminput.py <input file> <output file>"
+    print "Usage : python transformoutput.py <id> <input file> <output file>"

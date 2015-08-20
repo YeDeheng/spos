@@ -3,7 +3,7 @@
 from get_data import readSQL
 from tokenize import tokenize
 from pretag import transforminput
-from pretag import transforminput
+from pretag import transformoutput
 
 import subprocess
 import sys,os
@@ -21,6 +21,8 @@ def wrapper(istring, ostring):
 	q_tokenize = q_id + '-tokenized.txt'
 	q_transformin = q_id + '-input2tagger.txt'
 	q_pretag = q_id + '-pretagged.txt'
+	q_final = q_id + '-final.txt'
+
 
 	readSQL.read_knowledge_unit(q_id, q_raw_content)
 	tokenize.tokenize(q_raw_content, q_tokenize)
@@ -33,7 +35,15 @@ def wrapper(istring, ostring):
 	child.wait()	# wait() is important. 
 	print("parent process")
 
-	os.chdir("..")
+	os.chdir("..\data_final")
+
+	transformoutput.transformoutput(q_id, q_pretag, q_final)
+
+	print("program finish")
+
+
+
+
 
 if __name__=='__main__':
 	try:

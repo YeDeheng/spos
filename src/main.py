@@ -3,6 +3,7 @@
 from get_data import readSQL
 from tokenize import tokenize
 from pretag import transforminput
+from pretag import transforminput
 
 import subprocess
 import sys,os

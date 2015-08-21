@@ -11,4 +11,5 @@ do
 		chmod 777 ${user}${i}.annotation.log
 		chmod 777 ${user}${i}.annotation.tags
 	done
+	cd ..
 done 

@@ -1,0 +1,10 @@
+768262	How to check whether JavaScript is enabled in client browser using Java code	R P V P ^ V V P N N V ^ N
+768262	can anyone help me in trying to check whether JavaScript is enabled in client browser using Java code .	V O V O P V P V P ^ V V P N N V ^ N ,
+768262	A simple thing would be to do a call back from the page , such as an AJAX call . I don't think there's any other way to determine this , at least not universally .	D A N V V P V D N N P D N , A P D ^ V , O V V Y D A N P V D , O R R R ,
+768262	Are you trying to do this server-side or on the client in an applet ? If a browser does not support javascript ( or has it turned off ) , it's highly unlikely they will have support for Java applets .	V O V P V D A & P D N P D N , P D N V R V N , & V O V T , , L R R O V V V P ^ ^ ,
+768262	If a form submit is performed , you can put a hidden input in the form and fill out its value with javascript ( from OnSubmit ) and check that on the server side .	P D N V V V , O V V D A N P D N & V T D N P ^ , P ^ , & V O P D N N ,
+768262	Assuming you're writing a Java web application , one technique that I've used successfully is to have the first page that's accessed typically a login form write a session cookie when the page loads . Then have the Java code that the form submits to check for the existence of that cookie . On the client : On the server :	V L V D ^ N N , $ N P L V R V P V D A N L V R D N N V D N N R D N N , R V D ^ N P D N V P V P D N P D N , P D N , P D N ,
+768262	In yourform for you can put code like this : The parameter should only be submitted if the browser has scripts turned off . In your Java applications you can check it like so :	P ^ P O V V N P D , D N V R V V P D N V N V T , P D ^ N O V V O V R ,
+768262	I like this idea ... but is it a cross-browser solution ? It seems like something IE6 would love to mess up .	O V D N , & V O D A N , O V P N ^ V V P N T ,
+768262	Why do you say that ? Have you tried it ?	R V O V O , V O V O ,
+768262	If you have PHP support just copy and paste the code below . wish you a good luck and don't forget to make your code open	P O V ^ V R N & V D N P , V O D A N & V V P V D N V

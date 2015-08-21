@@ -1,0 +1,8 @@
+727528	Tools for coding conventions and analyzing HTML , CSS , Javascript client side code	N P N N & V ^ , ^ , A N N N
+727528	I use various code checkers for Java development but I haven't used one for HTML ,. CSS , Javascript . Do any exist . That flag bad practices or similar tool .	O V A N N P ^ N & O V V $ P ^ ^ ^ , ^ , V D N , O V A N & A N ,
+727528	Please accept an answer .	V V D N ,
+727528	Firebug with the YSlow addon from Yahoo is pretty effective at pointing out your inefficiencies . Also try the web developer addon and hitting ctrl+shift+a - it'll load your local code straight into the w3c validator . Read up on 508C compliance - you can't test for it but it's good to know .	N P D N N P ^ V R A P V T D N , R V D N N N & V ^ , L V D A N R P D $ N , V T P $ N , O V N P O & L A P V ,
+727528	W3C has a Markup Validation Service for validating ( X ) HTML . Also , W3C has tools : For CSS For Atom RSS feeds And JSLint is a tool for checking your JavaScript .	^ V D ^ ^ N P V E E E ! , R , ^ V N , P ^ P ^ ^ V ^ ^ V D N P V D N ,
+727528	+1 for JSLint . It is developed and maintained by Douglas Crockford , a renowned Javascript guru .	$ P ^ , O V V & V P ^ ^ , D A N N ,
+727528	js2-mode for Emacs will catch and highlight some common Javascript errors while you're editing your code . It's not as thorough as the external lint tools , but it's a lot more immediate in its feedback .	$ P ^ V V & N D N N N P L V D N , L R R A P D A N N , & L D N R A P D N ,
+727528	Firebug with CodeBurner gives you reference material for your HTML and CSS . You can lookup HTML elements , attributes , and CSS properties quickly without leaving the page .	N P ^ V O N N P D ^ & N , O V ^ ^ ^ , N , & N N R P V D N ,

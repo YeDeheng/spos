@@ -5,12 +5,14 @@ from tokenize import tokenize
 from pretag import transforminput
 from pretag import transformoutput
 
+
+import shutil
 import MySQLdb
 import subprocess
 import sys,os
 
 
-def wrapper(istring, annotator):
+def wrapper(istring, annotator, index):
 	cur_dir = os.getcwd()
 	batch_path = cur_dir + r'\pretag\pretag.bat'  # this is the batch file
 	print batch_path
@@ -39,9 +41,10 @@ def wrapper(istring, annotator):
 	os.chdir("..\data_final")
 
 	transformoutput.transformoutput(q_id, q_pretag, q_final)
+	shutil.copy2(q_final, annotator+str(index)+'.automatic_tags')
 
 	os.chdir("..")
-	
+
 	print("program finish")
 
 
@@ -62,8 +65,8 @@ if __name__=='__main__':
 		#wrapper(*sys.argv[1:])
 		for anno in annotators:
 			f = open(anno + '.txt', 'r')
-			for line in f:
+			for index, line in enumerate(f):
 				line = line.strip()
-				wrapper(str(line), anno)
+				wrapper(str(line), anno, index+1)
 	except TypeError: 
 		print "Usage : python tokenize.py <input file> <output file>"

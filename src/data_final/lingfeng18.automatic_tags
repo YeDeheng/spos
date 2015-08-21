@@ -1,0 +1,6 @@
+934708	asynchronous file upload with java servlet	A N V P ^ N
+934708	It is exactly the same . The client makes an HTTP request to the server ( by submitting a form ) . The server responds with some HTML ( which links to or embeds some JavaScript ) . Switching from PHP to Java is just a drop in replacement . You don't need to change any of the JavaScript . The user guide tells you how to set it up .	O V R D A , D N V D N N P D N , P V D N , , D N V P D ^ , D N P & V D ^ , , V P ^ P ^ V R D N P N , O V V P V D P D N , D N N V O R P V O T ,
+934708	Could you tell me how to embed HTML to a redirect without JSP ?	V O V O R P ^ ^ P D N P ^ ,
+934708	Why would a redirect be involved ? The servelet just needs to output a text / html response .	R V D N V A , D N R V P N D N , D N ,
+934708	A-Hah ! That just shows I'm really new to this AJAX thing . Was accustomed to redirecting to servlets and JSP . :) Thanks !	! , O R V L R A P D ^ N , V V P V P ^ & ^ , E ! ,
+934708	http://oreilly.com/pub/a/javascript/2002/02/08/iframe.html is the best idea to file-upload . i done file upload using hidden iframe . Please consult with attached link .	U V D A N P ^ , O V V V V A N , V V P A N ,

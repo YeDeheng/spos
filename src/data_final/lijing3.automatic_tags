@@ -1,0 +1,3 @@
+389136	Netbeans intellisense for Yahoo utils	^ N P ^ ^
+389136	In netbeans I created an html page in which I am using Yahoo utils . If I type " yahoo . " then namespace , render , hide are not visible in the interactive documentation . Please tell me how to configure Netbeans to handle this .	P S O V D N N P D O V V ^ ^ , P O V , ! , , R A , V , V V R A P D A N , V V O R P ^ ^ P V D ,
+389136	I don't use Netbeans , but I do know that Javascript is case-senstive , and that the global Yahoo object is YAHOO , not yahoo . So try it in all caps .	O V V ^ , & O V V D N V A , & P D A ^ N V ^ , R ! , P V O P D N ,

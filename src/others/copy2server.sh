@@ -1,15 +1,14 @@
 #!/bin/zsh
 
-for user in lingfeng gaosa zhenchang xuejiao chunyang lijing prakash
-do
-	cp $user-to.txt /var/www/html/stackoverflow-annotator/${user}.automatic_tags 
-done 
-
 cd /var/www/html/stackoverflow-annotator/
-for user in lingfeng gaosa zhenchang xuejiao chunyang lijing prakash
+for user in lingfeng gaosa zhenchang xuejiao chunyang lijing
 do
-	touch ${user}.annotation.log
-	touch ${user}.annotation.tags
-	chmod 777 ${user}.annotation.log
-	chmod 777 ${user}.annotation.tags
+	cd $user
+	for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+	do
+		touch ${user}${i}.annotation.log
+		touch ${user}${i}.annotation.tags
+		chmod 777 ${user}${i}.annotation.log
+		chmod 777 ${user}${i}.annotation.tags
+	done
 done 

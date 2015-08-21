@@ -5,11 +5,12 @@ from tokenize import tokenize
 from pretag import transforminput
 from pretag import transformoutput
 
+import MySQLdb
 import subprocess
 import sys,os
 
 
-def wrapper(istring, ostring):
+def wrapper(istring, annotator):
 	cur_dir = os.getcwd()
 	batch_path = cur_dir + r'\pretag\pretag.bat'  # this is the batch file
 	print batch_path
@@ -17,11 +18,11 @@ def wrapper(istring, ostring):
 	os.chdir(".\data_final")
 
 	q_id = istring
-	q_raw_content = q_id + '-raw.txt'
-	q_tokenize = q_id + '-tokenized.txt'
-	q_transformin = q_id + '-input2tagger.txt'
-	q_pretag = q_id + '-pretagged.txt'
-	q_final = q_id + '-final.txt'
+	q_raw_content = annotator + q_id + '-raw.txt'
+	q_tokenize = annotator + q_id + '-tokenized.txt'
+	q_transformin = annotator + q_id + '-input2tagger.txt'
+	q_pretag = annotator + q_id + '-pretagged.txt'
+	q_final = annotator + q_id + '-final.txt'
 
 
 	readSQL.read_knowledge_unit(q_id, q_raw_content)
@@ -39,15 +40,30 @@ def wrapper(istring, ostring):
 
 	transformoutput.transformoutput(q_id, q_pretag, q_final)
 
+	os.chdir("..")
+	
 	print("program finish")
 
 
-
-
+def get_postid():
+	db = MySQLdb.connect(host="localhost", 
+	                     user="root", 
+	                     passwd="ydh0114", 
+	                     db="stackoverflow201503")
+	cur = db.cursor() 
+	cur.execute(" SELECT Id FROM posts where Tags like '%<java>%' and Tags like '%<javascript>%' LIMIT 120")
+	id = cur.fetchall()
+	print id
 
 if __name__=='__main__':
+
+	annotators = ['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
 	try:
 		#wrapper(*sys.argv[1:])
-		wrapper('761459', 'out.txt')
+		for anno in annotators:
+			f = open(anno + '.txt', 'r')
+			for line in f:
+				line = line.strip()
+				wrapper(str(line), anno)
 	except TypeError: 
 		print "Usage : python tokenize.py <input file> <output file>"

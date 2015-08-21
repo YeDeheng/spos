@@ -1,0 +1,10 @@
+How to check whether JavaScript is enabled in client browser using Java code
+can anyone help me in trying to check whether JavaScript is enabled in client browser using Java code.
+A simple thing would be to do a call back from the page, such as an AJAX call. I don't think there's any other way to determine this, at least not universally.
+Are you trying to do this server-side or on the client in an applet? If a browser does not support javascript (or has it turned off), it's highly unlikely they will have support for Java applets.
+If a form submit is performed, you can put a hidden input in the form and fill out its value with javascript (from OnSubmit) and check that on the server side.
+Assuming you're writing a Java web application, one technique that I've used successfully is to have the first page that's accessed typically a login form write a session cookie when the page loads. Then have the Java code that the form submits to check for the existence of that cookie. On the client: On the server:
+In yourform for you can put code like this: The parameter should only be submitted if the browser has scripts turned off. In your Java applications you can check it like so:
+I like this idea...but is it a cross-browser solution? It seems like something IE6 would love to mess up.
+Why do you say that? Have you tried it?
+If you have PHP support just copy and paste the code below. wish you a good luck and don't forget to make your code open

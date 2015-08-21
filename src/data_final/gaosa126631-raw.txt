@@ -1,0 +1,8 @@
+Passing JS function to applet for as event listener
+Is it possible to pass a function/callback from javascript to a java applet? For example i have an applet with a button that when pressed it will call the passed js callback
+You can use  JSObject  to call back into javascript from Java. From that page:
+is it also possible to pass js function which is an object as the first argument of win.call instead the name of the js function?
+No, but instead of passing in the bare callback function you could create a new object containing it, pass that in then use the object.call(name) form.
+I tend to use something I derived from the reflection example at the bottom of  this page , as then you don't need to meddle with your classpath to get it to compile Then I just pass JSON strings around between the applet and javascript
+thx for the link, it just contains all the possible methods
+ps. to use  JSObject you may need to include "MAYSCRIPT" tag to applet html tag.

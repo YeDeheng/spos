@@ -1,0 +1,14 @@
+How can I handle Java object serialization with JavaScript?
+I have serialized the Java object located on the server side and sent it to the client How can I deserialize that XML string into the Java object using JavaScript and execute the methods of person class in the client side using the JavaScript? Please help me with syntax or any guidelines.
+Is this not a duplicate of your previous questions ? I'm getting a distinct sense of deja vu here
+XML is presented as a DOM tree to JavaScript
+ok, how does the javascript deserialize that recieved XML into Java object.since i want to deserialize into java object so that it could be executed in client side JVM once instantiating that java object
+What you're describing here sounds different than your question.
+why do you need JavaScript do deserialize the objects? why don't you simply use a Java-to-Java connection?
+You can't run Java methods with Javascript. The only thing you could do is to read the properties of the Java object - this is the only information that is serialized in the XML file. It is very  easy  to read XML with javascript. To be able to serialize a Java object, send it to a client and execute Java code there a totally different architecture would be needed. At first you need Java running on the client too. Then you would need to employ a method like RMI.
+does   satisfy meet my requirements sir?
+Yes, but you still need a different serializing technique and dealing with security issues. The applet would probably need to be signed in order to be able to communicate with the RMI server.
+This seems overly complicated.  What he really needs is to make his Java server provide a web service and then he needs to call that web service using AJAX.
+You can call Java methods on the client side using JavaScript by using SOAP.  This  article  explains how to create a WSDL web service that can be accessed by any SOAP client that supports WSDL. You can then call the Java WSDL service using AJAX in JavaScript (if you can find a JS library that implements SOAP and WSDL). Alternatively, you can write a simplified front-end to the Java WSDL service in PHP using PHP's built-in SoapClient library.  Make it take some simple GET arguments and return JSON or XML.  You could then trivially access the PHP web service using AJAX via jQuery (or an equivalent AJAX-supporting library).
++1 XStream supports JSON out of the box.
+If you're going for an applet and want to make Javascript calls from Java, checkout the  LiveConnect  with the JSObject wrapper class. This way you can excute javascript functions inside the applet (and pass information in between); Look into the IRIS applictation made for Flickr, it's open source and uses this technique. The Belgian JUG Parleys have a speech from a convention covering some of this,  You can find it here .

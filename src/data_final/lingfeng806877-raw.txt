@@ -1,0 +1,4 @@
+Strut2 validation, Overriding css_xhtml theme
+HI Folks, I'm using the Struts 2 validation. And for displaying the custom error messages I'm overriding the css_xhtml.. and the validation.js for client side validation. Every thing is going well but the validation is on form submit.. can i do it for all the form fields Onblur event.. Any suggestion highly appreciated  Thanks in Adavance Cheers, Vinayak V B
+you can use the  jquery plugin  to have onblur (client side) validation on your forms.   Furthermore, you may use DWR validation for struts2.  You will have to go through some setup procedures that involve adding the DWR.xml in your configuration file but once all that is done, you will be able to have AJAX validation on your forms.  Example
+You could just call the forms onsubmit function through an onblur handler.  Something like:

@@ -1,3 +1,0 @@
-You could use Python 3.0.. The default string type is unicode, so the  u''  prefix is no longer required.. In short, no. You cannot turn this off. The  u  comes from the  unicode.__repr__  method, which is used to display stuff in REPL: If I'm not mistaken, you cannot override this without recompiling Python. The simplest way around this is to simply print the string.. If you use the  unicode()  builtin to construct all your strings, you could do something like.. ..but don't do that, it's horrible
-This is as good a solution as any.  The real answer is to suck it up!
-+1 for me learning python 3 strings are all unicode by default

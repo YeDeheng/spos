@@ -1,0 +1,13 @@
+Trouble accessing Java classes from Firefox extension's Javascript
+I'm going to develop a Firefox extension which uses some Java classes. The extension gets the value of  input type="file"   fields, using Javascript. The Java class I'm going to create is the following: On Javascript, I have to use Java reflection in order to access Java classes.  In this manner I can create my Java object: I've been trying this extension on Firefox-3.5b4 and everything goes fine, but when I try it on Firefox-3.0.10 I get the following exception*: For example, putting the following line before the main method invokation: on both Firefox-3.0.10 and 3.5b4 I get an alert window which says: But only on 3.0.10 I get the exception, ONLY on my GNU/Linux machine. On Windows XP instead I have no problems on both Firefox versions! Note that on both Windows and Linux the Java plugin version is 6 update 13. Where am I wrong? Is it a possible bug on Firefox-3.0.10 Javascript engine or must I do any other thing before getting the main(...) method?
+you are incorrectly invoiking the method using; which is passing an argument of type java.lang.Class[] into the signature that is expecting a String object. simply pass the parameters object in as it is.
+public Method getMethod(String name,                         Class ... parameterTypes)                  throws NoSuchMethodException,                         SecurityException I guess he's right in that.
+now I get this exception:  InternalError: Unable to convert JavaScript value  to Java value of type java.lang.Class[]
+try changing the two reflecting lines to; var aStaticMethod = aClass.getMethod("main", parameters.getClass()); //gets the main(String[] args) method, here I get the exception* var myJava = aStaticMethod.invoke(null, parameters); removing the [] initializers since they already seem to have been created by the reflection call.
+new error: There is no Java method java.lang.Class.getMethod that matches JavaScript argument types (string, object). Candidate methods with the same name are:    java.lang.reflect.Method getMethod(java.lang.String, java.lang.Class[])
+assuming your complete class name is "your.package.Firefox" you could do:
+how do I set the "args" value?
+ReferenceError: importPackage is not defined
+in "plain" rhino this is supposed to work sorry :(
+Hi, just following-up DFA's comment: Related info:: https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/LiveConnect_Overview/JavaScript_to_Java_Communication
+I've already tried out all stuff from developer.mozilla.org, with no success...

@@ -1,0 +1,11 @@
+Java based Swing Browser should support JavaScript
+In my company, I am implementing a java based html browser. I found a lot of tools to generate complete browsers only in Swing which are looking like Mozilla. But I was not able to find a browser which supports JavaScript. The browser I will implement should execute JavaScript inside the HTML sides. Do you know of a tool that supports this? Or do you know of a parser which pairs the javascript to something I can use inside the html browser? I know that the eclipse plugins can handle javascript, but I can not use AWT in my project. Thanks for your help.
+You don't want to build this yourself.  Fortunately, there are a number of open source  javascript engines  you might be able to adapt.
+add the moment the html sides are shown by using C++ and a firefox plugin, but i should use the existing html sides which including javascript. I have no choice, i have to show html with javascript.
+I'm not saying don't do it:  I'm saying find someone else that's already done it and use that.
+In my company, I am implementing a java based html browser. Good God, why? That said,  this page at java.net  discusses some options; you could search it more extensively.
+I'd look at  Lobo .  It sounds like just want you want.  It has a HTML Renderer and parser, and some support for Javascript.  If it's missing a feature of Javascript that you need, it seems like it would easier to contribute to Lobo, instead of reinventing the wheel.
+That sounds like a good solution. I will test this. Thanks
+Will you please tell me that how to implement this?
+It will be available. I hope pretty soon. Its name is JWebPane and it is based on WebKit afaik. The interesting question is "When" Here's the link: http://weblogs.java.net/blog/ixmal/archive/2008/05/introducing_jwe.html
+News today: http://weblogs.java.net/blog/alex2d/archive/2008/12/jwebpane_projec.html

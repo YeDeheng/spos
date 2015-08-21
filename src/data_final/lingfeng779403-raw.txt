@@ -1,0 +1,7 @@
+JSP or JavaScript equivalent to PHP's $_SERVER["HTTP_HOST"]?
+I've go an absolute URL in my JavaScript that I have hard coded for window.location. I don't want to have to change this every time I am testing my app. In PHP I would have handled this by testing the $_SERVER["HTTP_HOST"] variable to find out what server I am on, and adjust accordingly. However, I'm not as familiar with Java and am wondering if it has a similar method? Or if maybe even JavaScript had a similar method? The code is as follows: What I would like to do is: In PHP I would have just done this: Any ideas? I suppose I'm operating under the assumption that you have to do an absolute URL to change the location of the current window in JavaScript. If there is another way to change the window location in JavaScript without an absolute URL, please feel free to offer that as well. Thanks in advance...
+You really should have search for this but in JSP it's :
+Javascript:
+The location object  has several properties , and the one you'd want is  hostname . Or, you can optionally just use a root-relative URL and just set the  pathname  property and not mess with the host business at all!
+What you need is: An example:
+Maybe this could help. It will replace any words you want by anything or nothing. It will work for your request too.

@@ -1,0 +1,4 @@
+Process the file before uploading it
+I got a form with SWFUpload. Files uploaded to the server are converted server-side (video being compressed, images being resized etc) Question is - can i delegate some of the functionality to client-side (like image resizing), to save some bandwidth for user.
+Video compression via Javascript would probably slow the browser so much that it wouldn't be bandwidth savings and if anything would probably annoy the end user.
+Thanks, very valid point. Though it doesn't have to be javascript compression. Maybe some process, just initiated by javascript?

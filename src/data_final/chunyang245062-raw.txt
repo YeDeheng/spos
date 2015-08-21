@@ -1,0 +1,72 @@
+What's the difference between JavaScript and Java?
+What's the difference between JavaScript and Java?
+Everything.  They're unrelated languages.
+Everything. Snap!
+*Punches in the arm*. According to wikipedia, I am required to do so after you jinxed me and before I can speak again. http://en.wikipedia.org/wiki/Jinx
+You misread that - I get to punch you now.  And get me my Coke.
+Everything. JavaScript was named this way by Netscape to confuse the unwary into thinking it had something to do with Java, the buzzword of the day, and it succeeded. The two languages are entirely distinct.
+Javascript was originally called Livescript, and the world would probably be a better place today if they hadn't renamed it!
+I doubt it was to cause confusion - what's the benefit to the company of that? I suspect the _intent_ was to ride on the success of Java, although the _effect_ was what you stated.
+"ride the success of java" by calling something unrelated with a similar name? That sounds very much like "causing confusion for marketing purposes" to me.
+Sun tried this naming trick again with the "Sun Java Desktop", which was essentially a branded version of Gnome and had nothing to do with Java.
+@Pax - Put another way, it confused the unwary into thinking it had something to do with Java, the buzzword of the day.
+Yeah, and it worked. @Greg Hewgill, the world might be a better place, but Javascript probably wouldn't be where it is today.
+@Just Some Guy - Well said. I improved my answer by adding some of your wit.
+The reason they changed the name was to in some way pacify Sun who at that point were involved with Netscape
+Java and Javascript are similar like Car and Carpet are similar.
+Awesome answer. I need to remember it!
+from ddaa import wit # I wish I had come up with that one!
+That is the best answer ever. If it is original (i.e. you hadn't heard it from somewhere else) you are a genius. I am going to start quoting this...
+Unfortunately, I can't claim originality. I don't recall where I first heard it, however.
+Damn, this answer earned you 690 rep atleast. It is a great answer still.
+Great answer. Simple and lets you get the idea.
+He didn't.  200 max per day.
+i don't think it's a flaw. he deserved his points. this is a short answer, and all he needs to know.
+lol, very nice comparison.
+I would vote this up twice if I could. Great analogy!
++1 (just to help Tim!)
+I would have said car and bus.
+@Ian Quigley: Ah, that must have been where I saw it! Thanks.
+Greg Hewgil, you're my new hero man!
+I prefer the version about ham and hamster.
+This is a bad answer. Javascript and Java are both languages for writing code, but they are used in different contexts. Car and Carpet are nothing at all like each other. Javascript and Java are easy to confuse for a beginner
+Here are some differences between the two languages: Java is a statically typed language; JavaScript is dynamic. Java is class-based; JavaScript is prototype-based. Java constructors are special functions that can only be called at object creation; JavaScript "constructors" are just standard functions. Java requires all non-block statements to end with a semicolon; JavaScript inserts semicolons at the ends of certain lines. Java uses block-based scoping; JavaScript uses function-based scoping. Java has an implicit  this  scope for non-static methods, and implicit class scope; JavaScript has implicit global scope. Here are some features that I think are particular strengths of JavaScript: JavaScript supports closures; Java can simulate sort-of "closures" using anonymous classes. (Real closures may be supported in a future version of Java.) All JavaScript functions are variadic; Java functions are only variadic if explicitly marked. JavaScript prototypes can be redefined at runtime, and has immediate effect for all referring objects. Java classes cannot be redefined in a way that affects any existing object instances. JavaScript allows methods in an object to be redefined independently of its prototype (think eigenclasses in Ruby, but on steroids); methods in a Java object are tied to its class, and cannot be redefined at runtime.
+2 years late, but thank you so much for this thoughtful explanation.  It's way more useful and informative than the selected answer, and deserves far more votes IMO
+I upvote both in such cases.  We need the right answer, but holy shmoly, geeks like us we really need more of this humor
+You  might also here strongly-typed and loosely-typed instead of statically-typed and dynamically-typed.
+One is essentially a toy, designed for writing small pieces of code, and traditionally used and abused by inexperienced programmers. The other is a scripting language for web browsers.
+Overtly trollish, but somewhat funny.
+Gave me a chuckle. Enough for +1
+If we could do categorical votes, I'd vote +1 funny, but otherwise, meh.
+I was about to berate you for dissing Javascript when it had come so far in the last few years.  Then I rid the second paragraph and L'dOL. But, hang on a mo, Java is my main income earner... :-)
+I downvoted this, then read it properly, then upvoted it.
+Poetry, Shog.  Sheer poetry.
+Perfect - +1 for humor, as someone else said, but -1 for actually answering the question.
+downvoted for dissing Javascript, then noticing you were talking about JAVA and upvoted (and lol'ed alot).
+-1 factually incorrect and not that funny.
+It's sad that I can only upvote once.  This is going on my Facebook profile somewhere...
+ROFL...  That was funny.
+But which language goes with which description(wasn't java meant to be used as a well not quite scripting but everything else for the net during some point in the 90s-by sun and netscape)? Also who writes small pieces of code in java?
+@Roman well of course, the proper Java way is to write at least 20 different classes using intricate inheritance and other cool OOP features to complete a FizzBuzz :)
+Jeeez. I almost downvoted the answer, when I started to read the first sentence :D
+twitted right after finishing laughing...
+Oh my gosh... hilarious! +1
+Actually, javascript isn't just for browsers. It's a complete scripting language often used for many applications that requires scripts. And Java isn't just for inexperienced or idiots. It can acomplish many things within no time.
+Brilliant.  A heartfelt +1
+They are independent languages with unrelated lineages. Brendan Eich created Javascript originally at Netscape. It was initially called Mocha. The choice of Javascript as a name was a nod, if you will, to the then ascendant Java programming language, developed at Sun by Patrick Naughton, James Gosling, et. al.
+JavaScript is an object-oriented  scripting  language that allows you to create dynamic HTML pages, allowing you to process input data and maintain data, usually within the browser. Java is a programming language, core set of libraries, and virtual machine platform that allows you to create compiled programs that run on nearly every platform, without distribution of source code in its raw form or recompilation. While the two have similar names, they are really two completely different programming languages/models/platforms, and are used to solve completely different sets of problems. Also, this is directly from the Wikipedia  Javascript article :    A common misconception is that JavaScript is similar or closely related to Java; this is not so. Both have a C-like syntax, are object-oriented, are typically sandboxed and are widely used in client-side Web applications, but the similarities end there. Java has static typing; JavaScript's typing is dynamic (meaning a variable can hold an object of any type and cannot be restricted). Java is loaded from compiled bytecode; JavaScript is loaded as human-readable code. C is their last common ancestor language.
+Javascript isn't just for HTML pages, Java6 now includes it, BIRT uses it for report scripting - I'm sure that there are other non-HTML uses beyond these two.
+You're right.  With the development of Rhino, and some of the other developments you mentioned, Javascript has come pretty far out of the browser sandbox.
+Scripting is simply one particular kind of programming... instead you should say perhaps that Java is a compiled programming language and javascript is a scripting or interpreted programming language.
+Take a look at the  Wikipedia link      JavaScript, despite the name, is essentially unrelated to the Java programming language, although both have the common C syntax, and JavaScript copies many Java names and naming conventions. The language was originally named "LiveScript" but was renamed in a co-marketing deal between Netscape and Sun, in exchange for Netscape bundling Sun's Java runtime with their then-dominant browser. The key design principles within JavaScript are inherited from the Self and Scheme programming languages.
+They have nothing to do with each other. Java is statically typed, compiles, runs on its own VM. Javascript is dynamically typed, interpreted, and runs in a browser. It also has first-class functions and anonymous functions, which Java does not. It has direct access to web-page elements, which makes it useful for doing client-side processing. They are also somewhat similar in syntax, but that's about it.
+Like everybody's saying, they're pretty much entirely different. However, if you need a  scripting  language for your  Java  application, Javascript is actually a really good choice.  There are ways to get Javascript running in the JVM and you can access and manipulate Java classes pretty seamlessly once you do. 
+In addittion to being entirely different languages, in my experience: Java looks nice at first, later it gets annoying. JavaScript looks awful and hopeless at first, then gradually you really start to like it. (But this may just have more to do with my preference of functional programming over OO programming... ;)
+Same experience here.
+Practically every PC in the world sells with at least one JavaScript interpreter installed on it. Most (but not "practically all") PCs have a Java VM installed.
+A Re-Introduction to Javascript  by the Mozilla team (they make Firefox) should explain it.
+It's like they didn't bother to edit it even a little.
+Java is to JavaScript as ham is to hamster
+Where do you think ham comes from?  ;)
+It comes from a big hamster; it's so big that you could confuse it with a pig. `;)`
+Don't be confused with name.. Java was created at Sun Microsystems (now Oracle). But, JavaScript was created at Netscape (now Mozilla) in the early days of the Web, and technically,  Java-Script  is a trademark licensed from Sun Microsystems used to describe Netscape s implementation of the language. Netscape submitted the language for standardization to ECMA (European Computer Manufacturer s Association) and because of trademark issues, the standardized version of the language was stuck with the awkward name  ECMAScript.  For the same trademark reasons, Microsoft s version of the language is formally known as  JScript.  In practice, just about everyone calls the language JavaScript. The real name is  ECMAScript .   Both are fully different languages!!!

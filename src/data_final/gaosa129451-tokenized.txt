@@ -1,0 +1,14 @@
+JavaScript or Java String Subtraction
+If you are using Java or JavaScript , is there a good way to do something like a String subtraction so that given two strings : you just get I know that I could just write code to walk the string comparing characters , but I was hoping there was a way to do it in really compact way . EDIT TO A DD: As I was analyzing the data I get when I use this I realized that I missed the statement of the case a bit . It should be : So , I actually only want to remove the sections that are identical . That said , the answer that I accepted is closest to my goal .
+I don't see how JavaScript is relevant here ...
+How isn't it ? You never need to remove a string from another string in javascript ? Granted , all solutions have been posted in java , but that doesn't invalidate the question .
+LOL - okay then , let's tag this as Java / JavaScript / C# / VB.NET / Python / Ruby / erlang / Smalltalk / Lisp / etc ... My point is , JavaScript and Java have nothing in common other than syntax shared with C# , C , C++ , etc . and this is not really a JavaScript solution .
+Should work ... EDIT : Apache commons libraries are also great to use As noted below , the StringUtils class does in fact have a method for this : StringUtils.remove()
+Can't you just replace the occurrences of the first string in the second with an empty string ?
+Depends on precisely what you want . If you're looking for a way to compare strings in the general case -- meaning finding common sub-strings between arbitrary inputs -- then you're looking at something closer to the Levenshtein distance and similar algorithms . However , if all you need is prefix / suffix comparison , this should work : ... or something roughly to that effect .
+Thanks Chris and Daniel ( and all the rest of you ) . That was amazingly fast .
+This seems like way too much code for what's requested - Erickson's approach ( replace string B in string A with empty string ) is much simpler and readable .
+@Herb Agreed , I do like Erickson's ( and Chris's ) approach much better for readability . However , his doesn't enforce strict prefix / suffix . The problem I have is the question is a bit ill-defined : what does String difference really mean ?
+If you're just trying to get whatever's after the last dot , I find this method easy in Javascript : subString will contain the value you're looking for .
+At first glance , I thought of RegExp , but adding to the question , you removed that possibility by adding to the start-string ... So you'll have to make a procedure , that takes every character that are equal out of the resulting string , something like this : By the way it doesn't have a meaning to set Java and javascript as equals in any context , a popular way of putting it could be : Java and javascript has four things in common : j - a - v - a ! - )
+Though this relies on that the character with code 1 does not appear in any of those strings .

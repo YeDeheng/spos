@@ -1,0 +1,9 @@
+What are FTL files
+I am new to a project and have to learn it inside out.  I see a lot of files with the extension  .ftl  in them.  I'n not sure what they are.  I know they can be modified and the user sees changes in the front end 
+Freemarker template files I believe. http://freemarker.org/
+http://filext.com/file-extension/FTL  points to  http://freemarker.sourceforge.net/  , does that help?
+Have a look  here . Following files have FTL extension: Family Tree Legends Family File FreeMarker Template Future Tense Texture
+freemarker combines java objects and view side (HTML/JQuery) contents in a single viewable template on a browser.
+FTL stands for FreeMarker Template. It is very useful when you want to follow the MVC (Model View Controller) pattern.  The idea behind using the MVC pattern for dynamic Web pages is that you separate the designers (HTML authors) from the programmers. 
+An ftl file could just have a series of html tags just as a JSP page or it can have freemarker template coding for representing the objects passed on from a controller java file file.  But, its actual ability is to combine the contents of a java class and view/client side stuff(html/ JQuery/ javascript etc). It is quite similar to velocity. You could map a method or object of a class to a freemarker (.ftl) page and use it as if it is a variable or a functionality created in the very page. ping me for more details..! cheers..! :)
+.FLT  is a file extension which is a mod for Faster than light , installed by Slipstream Mod Manager, which requires Java.

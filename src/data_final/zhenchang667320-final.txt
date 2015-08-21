@@ -1,0 +1,6 @@
+667320	Browser Java Plugin Detection	^ ^ ^ ^
+667320	What is the preferred method to determine if the Sun Java Plugin is installed in the browser ?	O V D A N P V P D ^ ^ ^ V V P D N ,
+667320	java deployment toolkit script src= " http://java.com/js/deployJava.js " if ( deployJava.versionCheck('1 . 6 ')) { alert ( " 1.6 installed ") }	N N N N N , U , P , $ , $ E E E , , O V E ,
+667320	this doesn't works always . ( 1 ) If its disabled in firefox it says not installed . ( 2 ) on lion os x , even when its disabled in all browsers , it tells installed	D V V R , E $ , P L A P ^ O V R V , E E E P N N G , R R L A P D N , O V V
+667320	This isn't an answer for your exact question but is offered as a solution for determining the browser itself . Don't be too harsh , this is really old code that I wrote some time ago .	D V D N P D A N & V V P D N P V D N O , V V R A , O V R A N P O V D N R ,
+667320	You may also consider PluginDetect script .	O V R V N N ,

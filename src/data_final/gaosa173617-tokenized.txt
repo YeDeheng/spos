@@ -1,0 +1,6 @@
+Calling JS from Applet : MalformedURLException : unknown protocol : javascript
+I read that you could call JavaScript code from a Java Applet by calling However , when I do this i get the following error : How do I work around this ?
+Works !! Maybe the browser does not have javascript enabled .. just a guess
+I get the same exception as you do because of that the URL class does not accept javascript : as a valid protocol . There is a workaround though ; supply an URLStreamHandler to the URL constructor . Example :
+This opens a new tab in Firefox , but the page and location address are both empty . Nothing happens .. :/
+Nevermind , apparently my Firefox 3.0 . 3 on Ubuntu is bugged :) It works perfectly on other computers . Thanks !

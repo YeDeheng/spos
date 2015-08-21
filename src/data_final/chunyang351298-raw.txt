@@ -1,0 +1,10 @@
+Best source code formatter for Javascript?
+I've been digging through Stack Overflow as well as a number of Google searches, and I cannot find a satisfactory code formatter for Javascript. I have found several related tools, such as syntax highlighters and pretty-printers, but I am looking for a tool that I can ideally create a wrapper for in Eclipse and simply run from the menu bar. Hence, if any Java-based ones are available, that is a big plus. Free and/or open-source is preferred as well. I am looking for something that my development group can use to maintain a consistent code style. Thanks. [EDIT]  Thank you for the incredibly fast responses! I would upvote you both if I had any karma. But especially kRON for linking to the  format customizations  page. [EDIT]   Related question  on Stack Overflow.
+In one breath:  Aptana Studio ! Yes, it's Java based and free (Eclipse, as standalone or plugin). You can also  customize the formatting .
+If you already use Eclipse, I recommend you to try  Aptana , you can install it as an Eclipse Plugin.
+If you also need Java programming i can recommend ' IntelliJ IDEA '  It offers excellent JavaScript formatting and refactoring out of the box.
+This is by far the best I've come across:  http://jsbeautifier.org/ Its an online tool, but source is available.
+Have you tried  jsfiddler . It's great for trying things out with Javascript. Built in JSLint   something called Tidy. Not sure whether that infers  jstidy   Piotr Zalewa  is the guy who wrote it. May be worth giving him a Tweet  @zalun  to confirm. 
+If you need source code, you might check out the code I present in the article  A JavaScript Formatter .
+If you are using notepad++, you can try jsminnpp plugin
+For Eclipse IDE you can use  JavaScript Code Formatter  based on  Goolge's Style Guide For IntelliJ IDEA you can use the same js code formatter xml file , but previously you have to install a special plugin  Eclipse Code Formatter Plugin , which solves the problem of maintaining a common code style in team environments where both IDEA and Eclipse are used 

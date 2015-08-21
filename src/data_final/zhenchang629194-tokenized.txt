@@ -1,0 +1,5 @@
+What happened to Rhino ? Is it still under active development ?
+The last release was in 2008-03-06 . What happened to it ? Is it still under active development ? Are there any replacements ?
+This question might better be asked at the relevant newsgroup : mozilla.dev.tech.js -engine . Or by mail to one of the responsible developers as mentioned at the Mozilla site . However , if you found out please post the answer here . I'm interested too .
+Slightly modified version of Rhino ( 1.6 r2 ) is part of Java 6 and on top of that from what I've tested Rhino is very much feature complete so there really isn't anything left to develop onwards , apparently it's also quite bug-free also . I'd say Rhino is one of those rare libraries which are actually done .
+According to a post last week at http://groups.google.com/group/mozilla.dev.tech.js-engine.rhino/topics

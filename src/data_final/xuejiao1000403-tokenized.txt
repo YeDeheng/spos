@@ -1,0 +1,5 @@
+setting classpath for java classes ( jar file ) in XUL , to access via javascript
+I am implementing firefox extension using XUL . I have set of java classes that is zipped as jar which needs to be accessed through javascript . If I copy my jar into jre's lib / ext then javascript will be able to invoke my java classes . If I remove from ext and package this jar in xpi , Javascript is unable to find the classpath for my jar file . Please let me know how to set the classpath for my java classes ( jar file ) in XUL environment at the earliest .
+javascript / XUL invoking java ? interesting ... any ref ?
+I suggest taking a look at this extension XQuery USE ME 1.4 . 7 and the following articles Calling java from XUL applications Java in Firefox Extensions
+Thanks , Is there any easy way to set the classpath such that javascript can find it . - Anand .

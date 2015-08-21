@@ -1,0 +1,4 @@
+Returning a host object in Rhino
+What is the best way to return an host object to JavaScript in Rhino? I have two classes like this: It works, in the sense that I can call the toString method, but the member object doesn't behave as I would expect: If I call  Object.prototype.toString  though, it does say it's a Member object: I've tried calling  m.setPrototype  and  Context.javaToJS .
+Edit : The method can also be written: which will call Member.jsConstructor; there may be other differences as well.
+Thanks, that's perfect.

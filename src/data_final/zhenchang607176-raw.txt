@@ -1,0 +1,21 @@
+Java equivalent to JavaScript's encodeURIComponent that produces identical output?
+I've been experimenting with various bits of Java code trying to come up with something that will encode a string containing quotes, spaces and "exotic" Unicode characters and produce output that's identical to JavaScript's  encodeURIComponent  function. My torture test string is:  "A" B   " If I enter the following JavaScript statement in Firebug: Then I get: Here's my little test Java program: This program outputs: URLEncoder.encode returns %22A%22+B+%C2%B1+%22 getBytes returns "A" B   " Close, but no cigar! What is the best way of encoding a UTF-8 string using Java so that it produces the same output as JavaScript's  encodeURIComponent ? EDIT:  I'm using Java 1.4 moving to Java 5 shortly.
+Using the javascript engine that is shipped with Java 6: import javax.script.ScriptEngine; import javax.script.ScriptEngineManager; public class Wow {     public static void main(String[] args) throws Exception     {         ScriptEngineManager factory = new ScriptEngineManager();         ScriptEngine engine = factory.getEngineByName("JavaScript");         engine.eval("print(encodeURIComponent('\"A\" B   \"'))");     } } Output: %22A%22%20B%20%c2%b1%20%22 The case is different but it's closer to what you want.
+Ah, sorry...I should have mentioned in the question that I'm on Java 1.4 moving to Java 5 shortly!
+Iiips. I don't have a solution for you then :-).
+If javascript is the only solution you can try Rhino, but it's too much just for this small problem.
+Even if he was using Java 6, I think this solution is WAY over the top.  I don't think he's looking for a way to directly invoke the javascript method, just a way to emulate it.
+Maybe. I think the easiest solution would be to write your own escape function if you can't find anything that does the trick for you. Just copy some method from the StringEscapeUtils class (Jakarta Commons Lang) and reimplement it with your needs.
+@Ravi Wallau very nice!
+This actually works, and if you're not worried about performance... I think it's good.
+Looking at the implementation differences, I see that: MDC on  encodeURIComponent() : literal characters (regex representation):  [-a-zA-Z0-9._*~'()!] Java 1.5.0 documentation on  URLEncoder : literal characters (regex representation):  [-a-zA-Z0-9._*] the space character  " "  is converted into a plus sign  "+" .  So basically, to get the desired result, use  URLEncoder.encode(s, "UTF-8")  and then do some post-processing: replace all occurrences of  "+"  with  "%20" replace all occurrences of  "%xx"  representing any of  [~'()!]  back to their literal counter-parts
+I wish you had written "Replace all occurrences of "%xx" representing any of [~'()!] back to their literal counter-parts" in some simple language. :( my tiny head is not able to understand it .......
+@Shailendra `[~'()!]` means `"~"` or `"'"` or `"("` or `")"` or `"!"`. :) I recommend learning the regex basics, too, though. (I also didn't expand on that since at least two other answers show the respective Java code.)
+This is the class I came up with in the end:
+Thanks for sharing the code! :-) +1
+Adding a tip. In Android 4.4 I found that we also need to replace `%0A` which means a return key in Android input, or it will crash the js.
+I came up with another implementation documented at,  http://blog.sangupta.com/2010/05/encodeuricomponent-and.html . The implementation can also handle Unicode bytes.
+I came up with my own version of the encodeURIComponent, because the posted solution has one problem, if there was a + present in the String, which should be encoded, it will converted to a space.  So here is my class:
+Thanks for a good solution! The others look totally... inefficient, IMO. Perhaps it'd be even better without the BitSet on today's hardware. Or two hard-coded longs for 0...127.
+`URLEncoder.encode("+", "UTF-8");` yields `"%2B"`, which is the proper URL encoding, so your solution is, my apologies, totally unnecessary. Why on earth `URLEncoder.encode` doesn't turn spaces into `%20` is beyond me.
+I have found PercentEscaper class from google-http-java-client library, that can be used to implement encodeURIComponent quite easily. PercentEscaper from google-http-java-client javadoc google-http-java-client home

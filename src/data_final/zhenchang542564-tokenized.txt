@@ -1,0 +1,24 @@
+How would I write a Java regex that gets the contents of a
+I'm trying to integrate analytics into my GWT application . To do this , I'm calling a service that returns a String of HTML that needs to be parsed and eval'ed . I need a regex that looks for and grabs either 1 ) the body of the tag or 2 ) the contents of the " src " attribute . I want to eval both of these with JavaScript . I'm happy with assuming that if a " src " attribute exists , the body can be ignored . Thanks , Matt
+This question is really confusing , Java ! = JavaScript
+I need to do the parsing of HTML with Java . After getting the JavaScript , I'll eval it . Oh , and I'm using GWT , so Java / is JavaScript . ;-)
+It seems like there's got to be a better way to do what you're trying to do . What you propose is a very unnatural pairing ( regex to find js tag & then eval while using GWT )
+Someone needs to tag this with ' GWT ' or ' Google Web Toolkit ' . Also , please make it more clear in the question that you are using GWT . Otherwise , this question doesn't make much sense ( better ways to do the same thing in a js context ) .
+To match the body of the tag , you can try something like which you want to match case-insensitively . Works assuming there is no "" appearing in the actual script body and no " > " in the attributes for the tag . You can add whitespace globbers to the regexp to make it more robust . Note the use of . * ? to make sure the scanning stops at the first closing tag . To add the src attribute , you can try and use the second submatch to get ' src ' , and third to get the body . Again , you might want to add whitespace globbers . But would be best off by running the thing through a proper HTML / XML / SGML parser , because regexps can blow up in special cases .
+You could use something like this : The regex uses the lazy star quantifier and should work in most cases but it could certainly be improved upon . It will match in $1 the attributes of the script tag , and in $2 the body . You can then check for the src attribute in $1 ( if it's not empty ) .
+How about to start with . You may need to customize it a bit to accept the src attribute with single quotes or without quotes . ignore white between the ' script ' and ' ' You also must use the DOTALL mode to ensure the . captures newlines .
+Your answer won't handle
+Agreed . There are many cases it won't handle ( like the type attribute of the script tag ) . I suggested this as a start to build from .
+and it will match everything between first and last which wouldn't work nicely when there are multiple scripts on the page
+Must it be a regex ? You can use the DOM to obtain such information , here is a trivial example of getting the contents of the BODY tag , you could apply it to whatever you like :
++1 Yes ! Parsing non-regular strings with regular expressions is WRONG !
++1 . I love regex , but use the right tool for the job . regex is the wrong tool for this job .
+While I agree in principle , he's trying to do this via the GWT which uses java to create javascript .
+This seems to do what you want : That being said , you would probably be better off using something like Tag Soup if it is at all possible .
+I'm marking this as the correct answer since it does what I originally wanted . Also , laz provided me with the secondary answer ( below ) that I needed for the final solution .
+Is that correct ? I would think the last peren should be inside the tag like this : ]* src =[ ' \ " ] ( [^ ' \ " ]* ) [ ' \ " ][^ > ]* > |[^ > ]* > ( [^ < ]* )) because I believe script tags not specified always with a closing node , not shorthand , so , never / >
+You are technically correct , which is the best kind of correct of course , except that HTML in the wild can certainly be malformed and if a browser can render it ( or ever did ) , be assured someone once wrote it that way ! Since Matt seems to have controlled the HTML being parsed though , he might not have needed to handle that scenario .
+Thanks for all the great suggestions everyone . I quickly discovered it's not possible to use Java's Regex API in GWT and was able to do what I wanted with JSNI . Unfortunately , I ran into additional issues as documented in the following thread : http://groups.google.com/group/Google-Web-Toolkit/browse_thread/thread/ac2589369ddec8a3
+I guessing that the call to eval ( scripts[i] . getAttribute ( " src ")) doesn't not load the URL that src= "" points to . It is simply trying to execute the actual URL string as JavaScript . You need to figure out how to load the contents of that URL and eval it .
+Ugh , I = I'm and doesn't not = does not
+Thanks for the suggestion . It allowed me to solve my problem . Here's the solution I came up with : http://groups.google.com/group/Google-Web-Toolkit/msg/0d076f647a4472bc

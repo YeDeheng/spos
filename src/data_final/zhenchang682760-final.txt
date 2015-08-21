@@ -1,0 +1,4 @@
+682760	Returning a host object in Rhino	V D N N P ^
+682760	What is the best way to return an host object to JavaScript in Rhino ? I have two classes like this : It works , in the sense that I can call the toString method , but the member object doesn't behave as I would expect : If I call Object.prototype.toString though , it does say it's a Member object : I've tried calling m.setPrototype and Context.javaToJS .	O V D A N P V D N N P ^ P ^ , O V $ N P D , O V , P D N P O V V D N N , & D N N V V P O V V , P O V V P , O V V L D N N , L V V A & N ,
+682760	Edit : The method can also be written : which will call Member.jsConstructor ; there may be other differences as well .	! , D N V R V V , O V V ^ , X V V A N P R ,
+682760	Thanks , that's perfect .	N , L A ,

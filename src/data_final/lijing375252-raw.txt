@@ -1,0 +1,7 @@
+How to resize a java applet when the browser is resized?
+I have a java applet that is embedded in html using the  object-comment-embed  method. I would like to resize the applet whenever the browser window is resized. I have found solutions around the internet, but they all work based on the deprecated  applet  tag. Also, when trying a  setSize()  call on my  embed  element in FireBug, it will resize the content of the applet, but not the applet viewport. That is, the area of the display that is given over to java does not change. Current code looks something like this:
+does your resize function get called? (e.g. where is the error so far?)
+Try replacing these lines: with:
+My vote is for this method. I've basically done this same thing to resize ActiveX controls. It should work the same for an Applet.
+This worked!  I was doing the same thing, using setSize().  It was being called but the applet wasn't resizing.  Thanks!
+Why don't you use percentage width and height. I usually use the following code for my applets:

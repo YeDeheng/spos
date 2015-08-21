@@ -1,0 +1,10 @@
+650377	JavaScript ( Rhino ) use library or include other scripts	^ , ! , V N & V A N
+650377	In JDK6 , is there a way to load multiple scripts , each in a file , and have the one script reference a method of another script ? Sort of like " include " ?	P ^ , V R D N P N A N , D P D N , & V D $ N N D N P D N , N P V , V , ,
+650377	As long as you use the same scope to execute each file , they will be able to reference functions and variables from previously executed files .	R R P O V D A N P V D N , O V V A P N N & N P R A N ,
+650377	Big help , thanks	A N , !
+650377	I think you're after the load() method / property of Rhino's global object / scope This will load a javascript source file , similar to how include / require will in PHP . Once you load a file , you'll be able to call and function or use any object defined in the loaded file . This is how things work when you're using the Rhino shell , which is the only context I know ( your question mentioned the Java SDK , which is outside my area of experience )	O V L P D ^ N , N P Z A N , V D V V D N N N , A P R V , V V P ^ , R O V D N , L V A P V & N & V D N V P D A N , D V R N V R L V D ^ N , O V D A N O V , D N V D ^ ^ , O V P D N P N ,
+650377	Is this available outside of the Rhino shell ?	V D A N P D ^ N ,
+650377	Not sure , that's not my pay rate . ( updated the question to reflect that )	R A , L R D V N , , V D N P V O ,
+650377	if you happen to be trying to do this within ant , you might see this error : but you can sidestep it :	P O V P V V P V D P N , O V V D N , & O V V O ,
+650377	The >> '' + < < is of major importance here !	D G , & E O V P A N R ,
+650377	A real-life example this time , i.e. running the esprima parser with Rhino 1.7 R4 . After running this code , you should see the output as follows : So indeed , the trick is in reusing the globalScope object .	D A N D N , O V D ^ ^ P ^ ^ ^ , P V D N , O V V D N P V , P R , D N V P V D A N ,

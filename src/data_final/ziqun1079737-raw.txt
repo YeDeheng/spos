@@ -1,0 +1,4 @@
+Passing variable name into GWT's JSNI
+Using the JavaScript Native Interface of GWT I can perform the following: Which will return the contents of a JavaScript variable called foo. How can I expand upon this to accept the variable name as a parameter? ie: Simply using the variable name inside the native code like one would to call: results in the JavaScript hunting for a declaration of a variable  named  foo and not one named with the  value of  foo. Thanks very much!
+Does  not work? You may also want to look at the GWT 'Dictionary' class. It's ideal for loading values, i.e. parameters from the host page.
+Brilliant! I'll look into the Dictionary too although we're aiming for re-usable JSP tags which can grab particular session attributes and dump them to pages where they're needed. It's not perfect but the Dictionary still requires two things to think about and the tags give us easy validation against a TLD. Thanks!

@@ -59,15 +59,15 @@ def get_postid():
 	print id
 
 if __name__=='__main__':
-	wrapper('18553292', 'grouptask', 1)
+#	wrapper('18553292', 'grouptask', 1)
 
-	# annotators = ['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
-	# try:
-	# 	#wrapper(*sys.argv[1:])
-	# 	for anno in annotators:
-	# 		f = open(anno + '.txt', 'r')
-	# 		for index, line in enumerate(f):
-	# 			line = line.strip()
-	# 			wrapper(str(line), anno, index+1)
-	# except TypeError: 
-	# 	print "Usage : python tokenize.py <input file> <output file>"
+	annotators = ['ziqun']#['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
+	try:
+		#wrapper(*sys.argv[1:])
+		for anno in annotators:
+			f = open(anno + '.txt', 'r')
+			for index, line in enumerate(f):
+				line = line.strip()
+				wrapper(str(line), anno, index+1)
+	except TypeError: 
+		print "Usage : python tokenize.py <input file> <output file>"

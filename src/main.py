@@ -59,7 +59,7 @@ def get_postid():
 	print id
 
 if __name__=='__main__':
-#	wrapper('18553292', 'grouptask', 1)
+	#wrapper('1158557', 'testliuyi', 1)
 
 	annotators = ['liuyi']#['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
 	try:

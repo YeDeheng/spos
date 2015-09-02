@@ -9,7 +9,7 @@ java -Xmx2g -Xms2g -jar %root%\classes\posTagTwitter.jar ^
       --trainOrTest test ^
       --testSet %1% ^
       --numLabeledSentences 2147483647 ^
-      --maxSentenceLength 200 ^
+      --maxSentenceLength 20000 ^
       --useGlobalForLabeledData ^
       --useStandardMultinomialMStep  ^
       --useStandardFeatures ^

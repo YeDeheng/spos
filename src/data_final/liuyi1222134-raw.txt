@@ -1,0 +1,6 @@
+focusing the text field
+How to focus the calender after selecting the date from calender.. I am selecting the date and calender is also closing but  after that focus is missing. Please help me on this issue.. Regards Sk
+which calender?
+java or javascript?
+It seriously depends on the calendar implementation you use. If the calendar is drown by Java tag try to seek the  onchange  attribute and set it to:
+This appears to be JavaScript code, not Java.

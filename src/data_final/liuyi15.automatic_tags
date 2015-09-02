@@ -1,0 +1,6 @@
+1222134	focusing the text field	V D N N
+1222134	How to focus the calender after selecting the date from calender .. I am selecting the date and calender is also closing but after that focus is missing . Please help me on this issue .. Regards Sk	R P V D N P V D N P ^ , O V V D N & N V R A & P O V V V , V V O P D N , ^ ^
+1222134	which calender ?	D N ,
+1222134	java or javascript ?	N & N ,
+1222134	It seriously depends on the calendar implementation you use . If the calendar is drown by Java tag try to seek the onchange attribute and set it to :	O R V P D N N O V , P D N V V P ^ N V P V D N N & V O P ,
+1222134	This appears to be JavaScript code , not Java .	D V P V A N , R ^ ,

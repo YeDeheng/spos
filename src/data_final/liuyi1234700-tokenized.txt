@@ -1,0 +1,6 @@
+Display a javascript / css tooltip within a @For loop with Tapestry 4.0 . 1
+I'm not at all familiar with Tapestry 4.0 . 1 and need to update a legacy application to display a formatted tooltip for a few links within a @For loop . What is the easiest / best way to go about accomplishing this ? Should I be using the @Script component or is there a simpler way ? By the way , upgrading to a newer version of Tapestry is out of the question . Unfortunate , yes , but out of my control . Thanks in advance for your help . Carl
+Maybe the better question would be : How do I pass a value to an inline function call ? I've written a small function to show the tip , but I need to pass the message to it like so : AdUnit Predicate So , how do I pass the message in ?
+After posting my question , I managed to come up with a rather hacky ( crappy ? ) solution . Can't say it's my proudest moment as a engineer , but it works . * * Some code omitted to protect the innocent .
+IIRC , using the dom to update the structure is preferred to a straight document.write ( ... ) CMA : There was something along the lines of DOM / document.write posted here on SO a while ago
+Use the @Any component . For your example , substitute MYTOOLTIP with whatever object is holding the message :

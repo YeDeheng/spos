@@ -1,0 +1,7 @@
+HtmlUnit property undefined script error
+I m submitting a form using java HtmlUnit package.  I am able to get pages and submit forms but on one page I m getting a ScriptException error.  The message is  Cannot set property "disabled" of undefined to "0"  I think it might be caused by a javascript method that tries to set a variable that has not been declared in the form but I m not sure.
+Does viewing the same page in a browser produce a JS error?
+I just tested it again and just noticed the page that loads does have a JS error.  Is there a way I can tell HtmlUnit to keep processing like ie does?
+Can you provide a public website to test against? As I am not able to load the JS in  https://mmlab1msslnx.fmr.com/mcwebadm/cgi-bin/edit_local.pl?operation=edit return_address=%2Fmcwebadm%2Fcgi-bin%2Fmenu.pl selected=22020c341b11de96c3000423d43f1d Also, please use latest HtmlUnit 2.5 version.
+I'm not able to provide a public test case.  I'm working on creating one. I have checked and I'm using version 2.5. I was hoping someone had seen something similar to this.
+This was caused my a javascript error on the page that was being loaded. I set the     webClient.getOptions().setThrowExceptionOnScriptError(false); but it still threw the exception.   SOLUTION: If you catch the ScriptException the page is STILL fully loaded and you can just continue processing and ignoring the exception. Example of HTML that fails:

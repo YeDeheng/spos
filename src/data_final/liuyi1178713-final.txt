@@ -1,0 +1,5 @@
+1178713	java equivalent of swfobject	N N P N
+1178713	looking for a javascript class like swfobject to embed java and have a simple fallback if the user doesn't have java or refuses the security prompt . thanks , Josh	V P D N N P N P D N & V D A N P D N V V N & V D N V , ! , ^
+1178713	appletobject may work , but I have not used it .	N V N , & O V R V O ,
+1178713	You could build one pretty easily . Have something like a div set up like this : Then add Java Plugin Detection ( builder ) to your JavaScript . Then if that returns true , then do something like :	O V V $ R R , V N P D N V T P D , R V ^ ^ ^ , N , P D N , R P O V A , R V N V ,
+1178713	Just embed the applet like you normally do and insert the fallback inside or insert a javascript snippet to remove the object : Besides param , you can add other elements , e.g. paragraphs with text or javascript calling some function to replace the object .	R V D N P O R V & V D A P & V D N N P V D N , P ^ , O V V A N , N N P N & N V D N P V D N ,

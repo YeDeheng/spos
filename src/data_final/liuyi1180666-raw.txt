@@ -1,0 +1,5 @@
+Any function / method in Java to implement a "freeze panes"-like sheet?
+We are using Java and Javascript to try to display a huge  sheet with freeze panes , but it is being very difficult. Does someone know about a library, method, script or something, either free or commercial, to do this? Thanks.
+Not totally sure I understand what a sheet with freeze panes means - could you expand on this?
+It means to be able to display a huge sheet, keeping the first row and column freeze. The idea is to be able to scroll through the sheet without losing the view of the first columns or rows which usually contain the column or row titles.
+After looking at  http://blogs.zoho.com/general/freeze-panes-in-zoho-sheet , I assume you are looking for similar functionality in tables?  One way to do this would be to have two tables, one that was "frozen" rows (or columns) that grew or shrunk in size based on how many frozen you had, and the other was the dynamic table that grew or fell in size based on how many unfrozen there were.

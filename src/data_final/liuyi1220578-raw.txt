@@ -1,0 +1,8 @@
+render complex org chart similar javascript/flash/java graphic library
+i am looking for javascript/flash/java graphic lib. that able to render nicely a very complex relationship where one node is relate to another node etc. for example a--> b---> c b--> d,e,f  any recommandation library?
+So essentially you are looking for recommendations for a graph visualization library for Javascript, Flash, or Java?
+yes.i am looking for graph visualization lib
+what a cooincidence, I was just looking into this myself. I found this: http://www.ryandesign.com/canviz/ http://code.google.com/p/canviz/
+Prefuse  is very cool and Java based.  Demo  here .
+This is the one I use for Organizational chart  http://code.google.com/apis/visualization/documentation/gallery/orgchart.html
+The  Graphviz  open source graph visualization software is widely used to render graphs, and  jGraphviz  is a binding for java.

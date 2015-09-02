@@ -61,7 +61,7 @@ def get_postid():
 if __name__=='__main__':
 #	wrapper('18553292', 'grouptask', 1)
 
-	annotators = ['ziqun']#['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
+	annotators = ['liuyi']#['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
 	try:
 		#wrapper(*sys.argv[1:])
 		for anno in annotators:

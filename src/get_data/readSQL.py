@@ -21,7 +21,7 @@ class MLStripper(HTMLParser):
 
 def strip_tags(html):
     s = MLStripper()
-    html = re.sub(r'<pre><code>.*?</code></pre>', '', html)
+    html = re.sub(r'<pre>.*?</pre>', '', html)
     s.feed(html)
     return s.get_data()
 

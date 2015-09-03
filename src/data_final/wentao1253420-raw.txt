@@ -1,0 +1,7 @@
+How to evalute prototype js files through rhino script engine in Java
+I am having problems evaluating a script.js file which is dependent of prototype.js. When i am trying to evaluate the script.js file through rhino script engine in java i got Script Exception like "TypeError: $H is not a function, it is java.lang.String.". How do I evaluate the files and how to include prototype.js and to define the prototype objects?
+have you evaluated them in the correct order? They need to be evaluated from the bottom up
+You cannot evaluate prototype.js using Rhino only. prototype.js have many references to the HTML DOM which is not implemented in Rhino/Java. For example (from prototype.js): document.createTextNode('') The document global object is not defined in Rhino context and createTextNode is not defined too. The solution is to remove all Objects/Functions from your copy of prototype.js that references the document, window or navigator objects. (assuming your js file does not use them)
+You could also get away with declaring some dummy objects for document, window, navigator and so on. This way you do not have to change prototype.js.
+Yes, that's cool :)
+Take a look at  env-js , which is a mock browser environment for Rhino. It's based on  some work by John Resig  to get JQuery working in Rhino. I wouldn't be surprised if Prototype worked as well.

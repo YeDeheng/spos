@@ -1,0 +1,9 @@
+How to parse javascript for links with java ?
+I'm writing a program ( in Java ) that needs to extract links from webpages . I'm using htmlParser ( http://htmlparser.sourceforge.net/) but I'm only able to extract html links ( defined with a href= " ... " ) and I don't know how to handle javascript code to extract links from ... can you help me ??
+There are some missing parts in your question . Is it formatting issue ?
+Please edit your question : it's hard to understand what you mean .
+I can't understand why it's hard to understand what I mean , is it because of my poor english ? Please tell me more .
+You can use Rhino with DOM environment , written in JavaScript . By the way it is written by John Resig .
+I've never played with DOM , but I'll take a look at your link , thanks .
+HTML Parser from sourceforge is useful . I have used it to parse a whole bunch of HTML already . However , parsing JS is different . Cheers .
+This is probally the most comprehensive tool out there . Rhino . Everything you want to do can be done with Rhino .

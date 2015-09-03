@@ -61,7 +61,7 @@ def get_postid():
 if __name__=='__main__':
 	#wrapper('1158557', 'testliuyi', 1)
 
-	annotators = ['liuyi']#['zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
+	annotators = ['wentao']#['liuyi', 'zhenchang', 'gaosa', 'chunyang', 'lijing', 'lingfeng', 'xuejiao']
 	try:
 		#wrapper(*sys.argv[1:])
 		for anno in annotators:

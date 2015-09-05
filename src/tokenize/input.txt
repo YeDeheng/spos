@@ -1,1 +1,4 @@
-setTimeout—pass
+http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_1?ie=UTF8&s=books&qid=1246803189&sr=8-1 http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8&s=books&qid=1246804047&sr=8-1
+
+Crockford's The Good Parts is not really a beginner's book.  I suggest you first start with Flanagan's Javascript The Definitive guide, and then move on to The Good Parts.  http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8&s=books&qid=1246804047&sr=8-1
+http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8 =books =1246804047 =8-1

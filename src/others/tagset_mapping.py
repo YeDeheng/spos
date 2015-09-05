@@ -38,10 +38,12 @@ REPS = {'_NN ' : '_N ',
 		'_IN ' : '_P ', 
 		'_TO ' : '_P ', 
 
-		'_CC ' : '_& ', 
-
+		'_RP ' : '_T ',
+		
 		'_PDT ' : '_X ', 
 		'_EX ' : '_X ', 
+
+		'_CC ' : '_& ', 
 
 		'_CD ' : '_$ ', 
 
@@ -54,18 +56,9 @@ REPS = {'_NN ' : '_N ',
 		'_LS ' : '_G '
 		}
  
-infile = open('pretag.txt', 'r')
-outfile = open('maptag.txt', 'w')
+infile = open('input.txt', 'r')
+outfile = open('output.txt', 'w')
 for line in infile: 
 	outfile.write(replace_tagset(line, REPS))
 infile.close()
 outfile.close()
-
-names = ['lingfeng', 'lijing', 'xuejiao', 'gaosa', 'chunyang', 'zhenchang', 'prakash']
-for name in names: 
-	infile = open(name+'-out.txt', 'r')
-	outfile = open(name+'-map.txt', 'w')
-	for line in infile: 
-		outfile.write(replace_tagset(line, REPS))
-	infile.close()
-	outfile.close()

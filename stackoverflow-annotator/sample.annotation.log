@@ -1,0 +1,65 @@
+Sat Jul 04 2015 00:41:21 GMT+0800 (SGT),,,pageReady,0:10:5
+Sat Jul 04 2015 00:41:21 GMT+0800 (SGT),,s0,twitterId,99999999999
+Sat Jul 04 2015 00:41:21 GMT+0800 (SGT),,s1,twitterId,28860286938
+Sat Jul 04 2015 00:41:21 GMT+0800 (SGT),,s2,twitterId,28853387204
+Sat Jul 04 2015 00:41:21 GMT+0800 (SGT),,s3,twitterId,28849380553
+Sat Jul 04 2015 00:41:21 GMT+0800 (SGT),,s4,twitterId,28841420096
+Sat Jul 04 2015 00:41:35 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:41:35 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:41:37 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:41:38 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:41:38 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:41:39 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:41:41 GMT+0800 (SGT),,s2w2,label,"S"
+Sat Jul 04 2015 00:41:42 GMT+0800 (SGT),,s2w2,label,"A"
+Sat Jul 04 2015 00:41:42 GMT+0800 (SGT),,s2w2,label,"S"
+Sat Jul 04 2015 00:41:44 GMT+0800 (SGT),,s2w2,label,"N"
+Sat Jul 04 2015 00:41:45 GMT+0800 (SGT),,s2w2,label,"P"
+Sat Jul 04 2015 00:41:49 GMT+0800 (SGT),,,submitPage,
+Sat Jul 04 2015 00:42:12 GMT+0800 (SGT),,s2,changeSentenceFlag,"Tokenization Error"
+Sat Jul 04 2015 00:42:13 GMT+0800 (SGT),,,submitPage,
+Sat Jul 04 2015 00:43:51 GMT+0800 (SGT),,s2,changeSentenceFlag,""
+Sat Jul 04 2015 00:43:52 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:43:52 GMT+0800 (SGT),,s2w2,focus,
+Sat Jul 04 2015 00:43:53 GMT+0800 (SGT),,s2w2,label,"N"
+Sat Jul 04 2015 00:44:00 GMT+0800 (SGT),,,submitPage,
+Sat Jul 04 2015 00:52:29 GMT+0800 (SGT),,,submitPage,
+Sat Jul 04 2015 00:52:37 GMT+0800 (SGT),,,pageReady,0:10:5
+Sat Jul 04 2015 00:52:37 GMT+0800 (SGT),,s0,twitterId,99999999999
+Sat Jul 04 2015 00:52:37 GMT+0800 (SGT),,s1,twitterId,28860286938
+Sat Jul 04 2015 00:52:37 GMT+0800 (SGT),,s2,twitterId,28853387204
+Sat Jul 04 2015 00:52:37 GMT+0800 (SGT),,s3,twitterId,28849380553
+Sat Jul 04 2015 00:52:37 GMT+0800 (SGT),,s4,twitterId,28841420096
+Sat Jul 04 2015 00:52:42 GMT+0800 (SGT),,,submitPage,
+Wed Aug 19 2015 21:11:48 GMT+0800 (SGT),,,pageReady,0:10:5
+Wed Aug 19 2015 21:11:48 GMT+0800 (SGT),,s0,twitterId,99999999999
+Wed Aug 19 2015 21:11:48 GMT+0800 (SGT),,s1,twitterId,28860286938
+Wed Aug 19 2015 21:11:48 GMT+0800 (SGT),,s2,twitterId,28853387204
+Wed Aug 19 2015 21:11:48 GMT+0800 (SGT),,s3,twitterId,28849380553
+Wed Aug 19 2015 21:11:48 GMT+0800 (SGT),,s4,twitterId,28841420096
+Wed Aug 19 2015 21:11:55 GMT+0800 (SGT),,s0w1,focus,
+Wed Aug 19 2015 21:11:55 GMT+0800 (SGT),,s0w1,focus,
+Wed Aug 19 2015 21:11:56 GMT+0800 (SGT),,s0w1,label,"="
+Wed Aug 19 2015 21:11:58 GMT+0800 (SGT),,s0w2,focus,
+Wed Aug 19 2015 21:11:59 GMT+0800 (SGT),,s0w2,label,"="
+Wed Aug 19 2015 21:12:00 GMT+0800 (SGT),,s0w3,focus,
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,,submitPage,
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,,pageReady,5:10:5
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,s5,twitterId,28909370980
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,s6,twitterId,28911454132
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,s7,twitterId,28925235726
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,s8,twitterId,28874578417
+Wed Aug 19 2015 21:12:07 GMT+0800 (SGT),,s9,twitterId,28854023389
+Wed Aug 19 2015 21:12:09 GMT+0800 (SGT),,,submitPage,
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,,pageReady,0:100:100
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s0,twitterId,99999999999
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s1,twitterId,28860286938
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s2,twitterId,28853387204
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s3,twitterId,28849380553
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s4,twitterId,28841420096
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s5,twitterId,28909370980
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s6,twitterId,28911454132
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s7,twitterId,28925235726
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s8,twitterId,28874578417
+Wed Sep 02 2015 16:18:46 GMT+0800 (Malay Peninsula Standard Time),,s9,twitterId,28854023389
+Wed Sep 02 2015 16:18:57 GMT+0800 (Malay Peninsula Standard Time),,,submitPage,

@@ -1,0 +1,5 @@
+953400	javascript : having trouble passing form values to javascript and processing it to httprequest	N , V N V N V P ^ & V O P ^
+953400	Here are some things to try : In your JavaScript , encode your URL paraemters with encodeURIComponent : Next , you may have to set the encoding on the request using setCharacterEncoding Last , I think if you call request.getParameter , it does the URLDecoding for you .	R V D N P V , P D N , L D ^ ^ P N , R , O V V P V D N P D N V V A , O V P O V ^ , O V D N P O ,
+953400	looks like you should be url encoding your request parameter values in your javascript tempUrl += " ? partnumber= " +partnumber+ " " + " itemdescription= " +escape ( itemdescription ) + " " + " itemshortdescription= " +escape ( itemdescription.substring ( 0 , 37 ))	V P O V V O V D N N V P D N ^ ^ , , E , E , , & , E E E E E E E E E E E E E E E E E $ , $ E
+953400	escape and unescape are deprecated - https://developer.mozilla.org/En/Core_JavaScript_1.5_Guide/Predefined_Functions/Escape_and_unescape_Functions	V & O V V , @
+953400	thanks for letting me know :)	N P V O V E

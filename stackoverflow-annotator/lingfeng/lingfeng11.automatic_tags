@@ -1,0 +1,5 @@
+880533	How to load . js files into a Rhino context in Java	R P N , L N P D ^ N P ^
+880533	Are you aware that Rhino ships in Java 6 ? If you want to use it with Java 5 , you'll have to download the API separately . You can get engines for many popular scripting languages from scripting.dev.java.net .	V O A D ^ N P ^ $ , P O V P V O P ^ $ , L V P V D ^ R , O V V N P A A N N P N ,
+880533	" You can get engines for many popular scripting languages from scripting.dev.java.net . " No , we can't anymore . I know this is extremely old , but is there a newer link we should use ?	, O V V N P A A N N P N , , ! , O V R , O V D V R A , & V R D A N O V V ,
+880533	@hexafraction Try this question : http://stackoverflow.com/questions/11838369/where-can-i-find-a-list-of-available-jsr-223-scripting-languages	@ V D N , U
+880533	+1 Thanks , that and the web archive have [ helped] ( http://web.archive.org/web/20070610234337/https://scripting.dev.java.net/) , since the latter is just a bag of links , really .	$ N , O & D N N V , E , U , P D N V R D N P N , R ,

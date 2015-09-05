@@ -1,0 +1,8 @@
+1072943	Communcation between Java and applet	N P ^ & N
+1072943	How do I get the ( updated ) value of Java Class's variable which is dynamically modified from an applet ? The problem here is , since the applet is loaded in separate class loaders the updated value is not available when the applet is loaded a second and subsequent times .	R V O V D , V , N P ^ Z A O V R A P D N , D N R V , P D N V V P A N N D V N V R A R D N V V D A & A N ,
+1072943	Do you mean server side Java , or JavaScript as your tag indicate ?	V O V N N ^ , & N P D N V ,
+1072943	In fact simple desktop java .... java script is there to indicate the use of applet by the java script from an html page	P N A N N , N N V R P V D V P N P D N N P D N N
+1072943	I'm not sure what you are trying to achieve - are there two classes , one in an applet and another , where ?	L R A O O V V P V , V R $ N , $ P D N & D , R ,
+1072943	Is this question still open ? If yes , please make clear what you want to do . Is your applet embedded in your desktop Java application , or in a web browser ?	V D N R A , P N , V V A O O V P V , V D N V P D N ^ N , & P D N N ,
+1072943	See Java-to-Javascript Communication , Java - Javascript interaction , and Interaction without LiveConnect for JavaScript interaction .	V ^ ^ , ^ , A N , & N P N P ^ N ,
+1072943	See http://rostislav-matl.blogspot.com/2011/10/java-applets-building-with-maven.html for working example .	V U P V N ,

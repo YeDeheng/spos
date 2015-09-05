@@ -1,0 +1,8 @@
+973496	Can Not Read id on JSF Components	V R V L P ^ ^
+973496	I have a little problem I am trying to use MartkItUp JQuery rich text editor on JSF textarea component . My form looks like this : The problem is that on output it gives me the id for textarea like that When I try in JQuery to point to it nothing happens . I had a plain textarea before , and there was no problem . Now , I have a lot of them . How do I point to id in JQuery , thats looks like comment : commentBody P.S : I know i can point to this text area by $('textarea ') . markItUp ( mySettings ); however i am looking for solution to point to specific text area by it's ID .	O V D A N O V V P V ^ ^ A N N P ^ ^ N , D N V P D , D N V O P N O V O D ^ P ^ P O R O V P ^ P N P O V V , O V D A ^ P , & R V D N , R , O V D N P O , R V O N P L P ^ , L V P V , ^ ^ , O V O V N P D N N P ^ ^ , E , E E R O V V P N P N P A N N P L N ,
+973496	try this : this will select text area having ID ending with commentBody . to select control with ID starting with particular string replace $ with ^	V D , O V A N N V N V P ^ , P A N P N V P A N V , P E
+973496	Got an error when was trying to use your method . But either way , thanks for trying to help	V D N R V V P V D N , & D N , N P V P N
+973496	Try this , $ ( ' #comment \\ : commentBody ') , for JQuery version 1.1 . 3 or greater .	V D , E E , # E E E E , P ^ N $ , $ & A ,
+973496	It's worked well . Thanks	L V R , !
+973496	You can read about JSF IDs here , but in this case you may also find the h : form prependId attribute useful .	O V V P ^ ^ R , & P D N O V R V D N , N N V A ,
+973496	Exemplary work . +1	A N , @

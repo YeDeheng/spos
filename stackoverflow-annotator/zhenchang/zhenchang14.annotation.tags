@@ -1,0 +1,6 @@
+673716		Why is Java giving me an IllegalArgumentException ?	R V ^ V O D ^ ,		Thu Sep 03 2015 19:24:27 GMT+0800 (Malay Peninsula Standard Time)
+673716		I'm using dwr and spring and I get this error : java.lang.IllegalArgumentException : Javascript name * is used by 2 classes I found nothing helpful on Google , do you know why I'm getting this error ?	L V ^ & ^ & O V D N , ^ , ^ N , V V P $ N O V R A P ^ , V O V R L V D N ,		Thu Sep 03 2015 19:24:28 GMT+0800 (Malay Peninsula Standard Time)
+673716		That is neither valid nor well-formed XML .	O V D A & V ^ ,		Thu Sep 03 2015 19:24:28 GMT+0800 (Malay Peninsula Standard Time)
+673716		Where is Java getting involved in this ? This is Javascript .	R V ^ V V P D , D V ^ ,		Thu Sep 03 2015 19:24:28 GMT+0800 (Malay Peninsula Standard Time)
+673716		Found . Because the version of the DWR's jar did not match the version of DWR's schema	V , P D N P D Z ^ V R V D N P Z N		Thu Sep 03 2015 19:24:28 GMT+0800 (Malay Peninsula Standard Time)
+673716		+1 for answering your own question	$ P V D A N		Thu Sep 03 2015 19:24:28 GMT+0800 (Malay Peninsula Standard Time)

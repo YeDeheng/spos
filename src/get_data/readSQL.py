@@ -38,7 +38,7 @@ class MLStripper(HTMLParser):
 
     def get_data(self):
         self.close()
-        return ''.join(self.fed)
+        return ' '.join(self.fed) # I would rather want more spaces.  
 
     # def handle_data(self, d):
     #     self.fed.append(d)
@@ -48,7 +48,7 @@ class MLStripper(HTMLParser):
 
 def strip_tags(html):
     s = MLStripper()
-    html = re.sub(r'<pre>.*?</pre>', '', html)
+    html = re.sub(r'<pre>.*?</pre>', ' ', html)
     s.feed(html)
     return s.get_data()
 

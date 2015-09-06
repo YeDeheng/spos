@@ -38,7 +38,9 @@ In	N
 my	N
 book	N
 ,	N
-yes.I'm	N
+yes	N
+.	N
+I'm	N
 a	N
 strong	N
 believer	N
@@ -51,7 +53,9 @@ beneath	N
 whatever	N
 toolkits	N
 you're	N
-using.Abstractions	N
+using	N
+.	N
+Abstractions	N
 are	N
 leaky	N
 -	N
@@ -436,7 +440,9 @@ does	N
 is	N
 a	N
 good	N
-thing.So	N
+thing	N
+.	N
+So	N
 pick	N
 your	N
 choice	N
@@ -487,7 +493,8 @@ stuck	N
 .	N
 
 Yes	N
-,...	N
+,	N
+...	N
 and	N
 I	N
 speak	N
@@ -513,7 +520,9 @@ in	N
 google	N
 searches	N
 for	N
-questions.Now	N
+questions	N
+.	N
+Now	N
 that	N
 I'm	N
 building	N
@@ -544,7 +553,9 @@ into	N
 javascript	N
 to	N
 solve	N
-it.I	N
+it	N
+.	N
+I	N
 notice	N
 that	N
 I	N
@@ -636,7 +647,7 @@ The	N
 Good	N
 Parts	N
 .	N
-http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8=books=1246804047=8-1	N
+http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8&s=books&qid=1246804047&sr=8-1	N
 
 I	N
 would	N
@@ -865,7 +876,9 @@ enough	N
 to	N
 track	N
 down	N
-problems.That	N
+problems	N
+.	N
+That	N
 being	N
 said	N
 ,	N
@@ -974,7 +987,9 @@ works	N
 is	N
 equally	N
 as	N
-important.I've	N
+important	N
+.	N
+I've	N
 seen	N
 developers	N
 who	N
@@ -1014,7 +1029,9 @@ do	N
 anything	N
 productive	N
 without	N
-them.Who	N
+them	N
+.	N
+Who	N
 would	N
 you	N
 rather	N
@@ -1108,7 +1125,9 @@ was	N
 a	N
 real	N
 productivity	N
-effect.Learning	N
+effect	N
+.	N
+Learning	N
 all	N
 your	N
 rich	N
@@ -1256,7 +1275,9 @@ not	N
 so	N
 little	N
 )	N
-language.Abstracting	N
+language	N
+.	N
+Abstracting	N
 a	N
 bit	N
 from	N
@@ -1367,7 +1388,9 @@ if	N
 you	N
 find	N
 them	N
-easier.Also	N
+easier	N
+.	N
+Also	N
 if	N
 you	N
 want	N

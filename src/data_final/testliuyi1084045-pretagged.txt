@@ -38,7 +38,9 @@ In	P
 my	D
 book	N
 ,	,
-yes.I'm	G
+yes	!
+.	,
+I'm	L
 a	D
 strong	A
 believer	N
@@ -49,9 +51,11 @@ underlying	A
 technology	N
 beneath	P
 whatever	D
-toolkits	^
+toolkits	N
 you're	L
-using.Abstractions	^
+using	V
+.	,
+Abstractions	^
 are	V
 leaky	A
 -	,
@@ -436,7 +440,9 @@ does	V
 is	V
 a	D
 good	A
-thing.So	N
+thing	N
+.	,
+So	P
 pick	V
 your	D
 choice	N
@@ -487,7 +493,8 @@ stuck	V
 .	,
 
 Yes	!
-,...	,
+,	,
+...	~
 and	&
 I	O
 speak	V
@@ -513,7 +520,9 @@ in	P
 google	^
 searches	V
 for	P
-questions.Now	G
+questions	N
+.	,
+Now	R
 that	P
 I'm	L
 building	V
@@ -544,7 +553,9 @@ into	P
 javascript	V
 to	P
 solve	V
-it.I	O
+it	O
+.	,
+I	O
 notice	V
 that	P
 I	O
@@ -636,7 +647,7 @@ The	D
 Good	A
 Parts	N
 .	,
-http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8=books=1246804047=8-1	U
+http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8&s=books&qid=1246804047&sr=8-1	U
 
 I	O
 would	V
@@ -864,8 +875,10 @@ know	V
 enough	A
 to	P
 track	N
-down	P
-problems.That	O
+down	T
+problems	N
+.	,
+That	O
 being	V
 said	V
 ,	,
@@ -973,8 +986,10 @@ abstraction	N
 works	V
 is	V
 equally	R
-as	P
-important.I've	L
+as	R
+important	A
+.	,
+I've	L
 seen	V
 developers	N
 who	R
@@ -1014,7 +1029,9 @@ do	V
 anything	V
 productive	A
 without	P
-them.Who	O
+them	O
+.	,
+Who	O
 would	V
 you	O
 rather	R
@@ -1108,7 +1125,9 @@ was	V
 a	D
 real	A
 productivity	N
-effect.Learning	V
+effect	N
+.	,
+Learning	V
 all	X
 your	D
 rich	A
@@ -1256,7 +1275,9 @@ not	R
 so	R
 little	A
 )	,
-language.Abstracting	V
+language	N
+.	,
+Abstracting	V
 a	D
 bit	N
 from	P
@@ -1367,7 +1388,9 @@ if	P
 you	O
 find	V
 them	O
-easier.Also	N
+easier	A
+.	,
+Also	R
 if	P
 you	O
 want	V

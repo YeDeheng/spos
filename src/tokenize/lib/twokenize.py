@@ -64,6 +64,8 @@ API = regex_or(r'((\w+)\.)+\w+\(\)', r'\w+\(\)', r'((\w+)\.)+(\w+)')
 API_RE = mycompile(API)
 plural = r'\w+\(s\)'
 plural_RE = mycompile(plural)
+ProgrammingOperators = regex_or(r'==', r'!=', r'>=', r'<=', r'&&', r'\|\|')
+
 Concat = r'\w+[/—]\w+'
 
 Timelike = r'\d+:\d+'
@@ -107,9 +109,10 @@ ProtectThese = [
     Separators,
     Decorations,
     EmbeddedApostrophe,
-    API,
+    API,  # Deheng
     PunctSeq,  # Deheng
-    plural  # Deheng
+    plural,   # Deheng
+    ProgrammingOperators  # Deheng
 ]
 Protect_RE = mycompile(regex_or(*ProtectThese))
 

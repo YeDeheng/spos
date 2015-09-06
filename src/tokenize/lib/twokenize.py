@@ -47,6 +47,7 @@ UrlStart2 = r'[a-z0-9\.-]+?' + r'\.' + CommonTLDs + pos_lookahead(r'[/ \W\b]')
 UrlBody = r'[^ \t\r\n<>]*?'  # * not + for case of:  "go to bla.com." -- don't want period
 UrlExtraCrapBeforeEnd = '%s+?' % regex_or(PunctChars, Entity)
 UrlEnd = regex_or( r'\.\.+', r'[<>]', r'\s', '$') # / added by Deheng
+
 Url = (r'\b' +
     regex_or(UrlStart1, UrlStart2) +
     UrlBody +
@@ -160,15 +161,18 @@ def tokenize(tweet):
   #tweet = re.sub(u'—', ' ', tweet) # Deheng
   #tweet = tweet.replace('\x97', ' ') # Deheng
   text = unicodify(tweet)
-
+  print text
+  text = re.sub(u'—', ' ', text) # Deheng
+  text = re.sub('(?<=\w)/\s??', ' ', text) # Deheng
   text = squeeze_whitespace(text)
   # Convert HTML escape sequences into their actual characters (so that the tokenizer and emoticon finder are not fooled).
   text = re.sub(r'&lt;', '<', text)
   text = re.sub(r'&gt;', '>', text)
   text = re.sub(r'&amp;', '&', text)
 
-  text = re.sub(u'—', ' ', text) # Deheng
-  text = re.sub('(?<=\w)/(?=\s+)', ' ', text)
+
+
+  print text
 
   t = Tokenization()
   t += simple_tokenize(text)

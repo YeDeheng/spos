@@ -1,12 +1,12 @@
 import sys,os
 import lib.twokenize
 
-print 'this is tokenize.py '
 def tokenize(istring,ostring):
   print 'this is tokenize.py '
   ifile=open(istring,'r')
   ofile=open(ostring,'w')
   for line in ifile:
+    print line
     ofile.write(u" ".join(lib.twokenize.tokenize(line[:])).encode('utf-8')+'\n')
   ofile.close()
   ifile.close()

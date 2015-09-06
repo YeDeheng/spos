@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from get_data import readSQL
-from tokenize import tokenize
+from mytokenizer import mytokenizer
 from pretag import transforminput
 from pretag import transformoutput
 
@@ -28,7 +28,7 @@ def wrapper(istring, annotator, index):
 
 
 	readSQL.read_knowledge_unit(q_id, q_raw_content)
-	tokenize.tokenize(q_raw_content, q_tokenize)
+	mytokenizer.tokenize(q_raw_content, q_tokenize)
 	transforminput.transforminput(q_tokenize, q_transformin)
 
 	os.chdir("..\pretag")

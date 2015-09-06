@@ -146,7 +146,9 @@ use	V
 functions	N
 as	P
 proper	A
-objects.I	N
+objects	N
+.	,
+I	O
 don't	V
 really	R
 see	V
@@ -647,7 +649,14 @@ The	D
 Good	A
 Parts	N
 .	,
-http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8&s=books&qid=1246804047&sr=8-1	U
+http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8	U
+&s	^
+=b	^
+ooks	^
+&qid	^
+=1246804047	^
+&sr	^
+=8-1	$
 
 I	O
 would	V

@@ -1,0 +1,1 @@
+github.com/ is your best. As of Flash 10 you do not need a media server.  You can capture the raw samples and send them to an arbitrary back-end with an HTTP post. https://code.google.com/p/wami-recorder/

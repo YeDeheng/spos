@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
-import tokenize as mytokenizer
 import sys,os
+
+lib_path = os.path.abspath(os.path.join('..'))
+sys.path.append(lib_path)
+from mytokenizer import mytokenizer
 
 import MySQLdb
 import re

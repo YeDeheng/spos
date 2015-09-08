@@ -9,19 +9,28 @@ import MySQLdb
 import re
 from HTMLParser import HTMLParser
 from htmlentitydefs import entitydefs
-
+from bs4 import BeautifulSoup
 import codecs
-codecs.register_error('replace_against_space', lambda e: (u' ',e.start + 1))
+
+def my_encoder(my_string):
+   for i in my_string:
+      try :
+         yield unicode(i)
+      except UnicodeDecodeError:
+         yield ' ' #or another whietespaces 
+
+#codecs.register_error('replace_against_space', lambda e: (u' ',e.start + 1))
 #print unicode('ABC\x97ab\x99c上午', 'utf-8', errors='replace_against_space')
 
-
+def strip_backtick(istring):
+    return re.sub(r'(`(?=\S)|(?<=\S)`)', '', istring)  # this is hacky. Deheng
 
 class MLStripper(HTMLParser):
     def __init__(self):
         self.reset()
         self.fed = []
         self.entityref = re.compile('&[a-zA-Z][-.a-zA-Z0-9]*[^a-zA-Z0-9]')
-    
+
     def handle_data(self, d):
         self.fed.append(d)
 
@@ -34,21 +43,27 @@ class MLStripper(HTMLParser):
     def handle_entityref(self, name):
         if entitydefs.get(name) is None:
             m = self.entityref.match(self.rawdata.splitlines()[self.lineno-1][self.offset:])
-            entity = m.group()
+            
             # semicolon is consumed, other chars are not.
-            if entity[-1] != ';':
-                entity = entity[:-1]
-            self.fed.append(entity)
+            if m is not None:
+            	entity = m.group()
+            	if entity[-1] != ';':
+                	entity = entity[:-1]
+            	self.fed.append(entity)
+            else: 
+            	print "entity is none"
+            	self.fed.append('')
         else:
             self.fed.append(' ')
 
     def get_data(self):
-        self.close()
-        return ' '.join(self.fed)
+        self.close()    # N.B. ensure all buffered data has been processed
+        return ''.join(self.fed)
 
 def strip_tags(html):
     s = MLStripper()
     html = re.sub(r'<pre>.*?</pre>', ' ', html)
+    html = strip_backtick(html)
     s.feed(html)
     return s.get_data()
 
@@ -61,7 +76,7 @@ def dump(ostring):
 	                     db="stackoverflow201503")
 	cur = db.cursor()
 
-	cur.execute("SELECT Id FROM posts where Tags like '%<java>%' and Tags like '%<javascript>%' limit 2")
+	cur.execute("SELECT Id FROM posts where Tags like '%<java>%' and Tags like '%<javascript>%' ")
 	IDs = cur.fetchall()
 	
 	f = open(ostring, 'w')
@@ -74,6 +89,7 @@ def dump(ostring):
 
 			cur.execute("SELECT Body FROM posts where Id=%s" %(question_id))
 			body = cur.fetchall()
+
 			cur.execute("SELECT Text FROM comments where PostId=%s" % (question_id))
 			comments = cur.fetchall()
 
@@ -92,13 +108,17 @@ def dump(ostring):
 				
 				cur.execute("SELECT Text FROM comments where PostId=%s" %(answer_id))
 				ans_comments = cur.fetchall()
+
 				all += ans_comments
 
 			for row in all: 
-				uni = unicode(strip_tags(row[0]), 'utf-8', errors='replace_against_space')
+				#uni = unicode(strip_tags(row[0]), 'utf-8', errors='replace_against_space')
+				uni = ''.join( my_encoder(strip_tags(row[0])) )
 				f.write(uni + '\n')
 	f.close()
 
 if __name__=='__main__':
+	# html = '''`<script &abc&cs`'''
+	# print strip_tags(html)
 	dump('raw.txt') # dump to input_brown.txt
 	mytokenizer.tokenize('raw.txt', 'tokenized.txt')

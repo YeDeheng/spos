@@ -2,7 +2,7 @@ import sys,os
 import lib.twokenize
 
 def tokenize(istring,ostring):
-  print 'this is mytokenizer.py '
+  #print 'this is mytokenizer.py '
   ifile=open(istring,'r')
   ofile=open(ostring,'w')
   for line in ifile:

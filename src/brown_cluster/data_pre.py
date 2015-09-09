@@ -77,7 +77,7 @@ def dump(ostring):
 	cur = db.cursor()
 
 	#cur.execute("SELECT Id FROM posts where Tags like '%<java>%' or Tags like '%<javascript>%' ")
-	cur.execute("SELECT Id FROM posts where Tags like '%<java>%' or Tags like '%<javascript>%' ")
+	cur.execute("SELECT Id FROM posts where (Tags like '%<java>%' or Tags like '%<javascript>%') and PostTypeId=1 ") #" and Id>=6155464 limit 10 ")
 	IDs = cur.fetchall()
 	
 	f = open(ostring, 'w')
@@ -118,7 +118,7 @@ def dump(ostring):
 			f.write(uni + '\n')
 			for row in body: 
 				#uni = unicode(strip_tags(row[0]), 'utf-8', errors='replace_against_space')
-				uni =  ''.join( my_encoder( strip_tags(row[0]) ) )
+				uni =  ''.join( my_encoder(  strip_tags(''.join(my_encoder(row[0]) ) ) ) )
 				f.write(uni + '\n')
 			for row in comments:
 				uni =  ''.join( my_encoder( strip_backtick(row[0]) ) )
@@ -126,7 +126,7 @@ def dump(ostring):
 	f.close()
 
 if __name__=='__main__':
-	# html = '''`<script &abc&cs`'''
-	# print strip_tags(html)
+	# html = '''asdfasdf'''
+	# print strip_tags(''.join(my_encoder(html)))
 	dump('raw.txt') # dump to input_brown.txt
 	mytokenizer.tokenize('raw.txt', 'tokenized.txt')

@@ -76,7 +76,8 @@ def dump(ostring):
 	                     db="stackoverflow201503")
 	cur = db.cursor()
 
-	cur.execute("SELECT Id FROM posts where Tags like '%<java>%' and Tags like '%<javascript>%' ")
+	#cur.execute("SELECT Id FROM posts where Tags like '%<java>%' or Tags like '%<javascript>%' ")
+	cur.execute("SELECT Id FROM posts where Tags like '%<java>%' or Tags like '%<javascript>%' ")
 	IDs = cur.fetchall()
 	
 	f = open(ostring, 'w')
@@ -88,32 +89,39 @@ def dump(ostring):
 			title = cur.fetchall()
 
 			cur.execute("SELECT Body FROM posts where Id=%s" %(question_id))
-			body = cur.fetchall()
+			q_body = cur.fetchall()
 
 			cur.execute("SELECT Text FROM comments where PostId=%s" % (question_id))
-			comments = cur.fetchall()
+			q_comments = cur.fetchall()
 
-			if title[0][0] is None:
-				all = body + comments
-			else: 
-				all = title + body + comments 
-
+			# if title[0][0] is None:
+			# 	all = body + comments
+			# else: 
+			# 	all = title + body + comments
+			body = q_body 
+			comments = q_comments
+			
 			cur.execute("SELECT Id FROM posts where ParentId=%s" %(question_id))
 			answers = cur.fetchall()
 			for row in answers:
 				answer_id = row[0]
 				cur.execute("SELECT Body FROM posts where Id=%s" %(answer_id))
 				ans_body = cur.fetchall()
-				all += ans_body
+				body += ans_body
 				
 				cur.execute("SELECT Text FROM comments where PostId=%s" %(answer_id))
 				ans_comments = cur.fetchall()
 
-				all += ans_comments
+				comments += ans_comments
 
-			for row in all: 
+			uni =  ''.join( my_encoder( title[0][0] ) )
+			f.write(uni + '\n')
+			for row in body: 
 				#uni = unicode(strip_tags(row[0]), 'utf-8', errors='replace_against_space')
-				uni = ''.join( my_encoder(strip_tags(row[0])) )
+				uni =  ''.join( my_encoder( strip_tags(row[0]) ) )
+				f.write(uni + '\n')
+			for row in comments:
+				uni =  ''.join( my_encoder( strip_backtick(row[0]) ) )
 				f.write(uni + '\n')
 	f.close()
 

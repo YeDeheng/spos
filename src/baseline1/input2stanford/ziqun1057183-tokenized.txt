@@ -1,0 +1,5 @@
+Share an applet across many jsp pages
+In my web application , a series of jsp pages are navigated . These jsp pages appear on the Right Hand side ( frame ) of the screen . On the left frame , I have an applet . This applet is common to all jsps . From all of the jsps , I want to invoke a method on the applet . The javascript code is inside of each jsp . Is there a way to do this ? Any approaches , suggestion , Code snippets most welcome . The applet basically displays an image . Based on the user interaction in the jsp pages , the image needs to change / rotate and so on . But the applet is common to all and should not be loaded on each of the jsps load . Thats why I am looking for a way for all jsps to communicate to the single applet ( via javascripts of course ) .
+Its possible.See here for details How to invoke invisible applet methods
+But I dont want to embed the applet in each of the jsps . That is the catch . The applet needs to be invoked from a jsp where it is NOT embedded .
+Let's say that the Applet is in Frame F1 , your javascript is in Frame F2 then you can call your Applet method from F2 with : Your Frameset : The page with with the applet is Bye .

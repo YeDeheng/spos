@@ -1,0 +1,10 @@
+JavaScript ( Rhino ) use library or include other scripts
+In JDK6 , is there a way to load multiple scripts , each in a file , and have the one script reference a method of another script ? Sort of like " include " ?
+As long as you use the same scope to execute each file , they will be able to reference functions and variables from previously executed files .
+Big help , thanks
+I think you're after the load() method / property of Rhino's global object / scope This will load a javascript source file , similar to how include / require will in PHP . Once you load a file , you'll be able to call and function or use any object defined in the loaded file . This is how things work when you're using the Rhino shell , which is the only context I know ( your question mentioned the Java SDK , which is outside my area of experience )
+Is this available outside of the Rhino shell ?
+Not sure , that's not my pay rate . ( updated the question to reflect that )
+if you happen to be trying to do this within ant , you might see this error : but you can sidestep it :
+The >> '' + < < is of major importance here !
+A real-life example this time , i.e. running the esprima parser with Rhino 1.7 R4 . After running this code , you should see the output as follows : So indeed , the trick is in reusing the globalScope object .

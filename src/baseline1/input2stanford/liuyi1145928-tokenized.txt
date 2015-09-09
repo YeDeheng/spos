@@ -1,0 +1,7 @@
+TextMate equivalent to gVim Ctrl+P
+To auto complete a previously written string . Is it possible ? EDIT I'm editing javascript / java if that matters .
+Yes - the autocomplete key is ' escape ' by default . See the TextMate manual for further information .
+Thank you !!! it was driving me crazy !!! :) About the manual ... mhhhh ... mmhh well .. Beside having to write my own product user manual ( which I hate and usually I avoid ) do I have to read others them too ??? :) :) :) ;) Thanks again
+@Oscar - absolutely . RTFM , man .
+Also , Google " Textmate tips " - I seem to pick up something new in every blogpost I read about TM .
+Thanks for the hint . I didn't know about http://textmatetips.com .

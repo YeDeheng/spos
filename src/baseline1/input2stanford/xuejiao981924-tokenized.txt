@@ -1,0 +1,5 @@
+Native Javascript method in GWT
+I have a native Javascript method in one of my GWT Java classes , but I'm having trouble calling my Java methods from the native Javascript code . I tried to follow this as closely as I could , but I can't get it to work . I compiled it and ran it in Firefox , and the error console said " Error : this.lc is not a function " . I tried changing all the methods to public , but that didn't seem to make a difference . What am I doing wrong ?
+In all the code I've done in the past , I've never used ' this ' to identify my class , I have passed the class in . Eg : Change this : To this :
+Perfect ! This makes sense , but I wish it was documented better on the GWT site .
+I found a better way . It's similar to what you do in JavaScript , where you set " var that = this " . Using this approach , you don't have to pass this to listenForPostMessage() :

@@ -1,0 +1,4 @@
+Read Browser / Client time from Http Servlet request header
+Is it possible to read the Browser ( Client machine ) time when a request is made to the servlet ?
+I don't believe so . Unfortunately the HTTP Date header is only sent for PUT or POST messages , and even then it's optional : Clients SHOULD only send a Date header field in messages that include an entity-body , as in the case of the PUT and POST requests , and even then it is optional . A client without a clock MUST NOT send a Date header field in a request . If you have control of the client , you could ( perhaps ) encode it as a separate experimental HTTP header . Or add it as a GET parameter etc .
+You can use javascript and append the time to every request . Provided that javascript is enabled , you can add the following to your links : You can do something similar , if you need timezone information . This question may help .

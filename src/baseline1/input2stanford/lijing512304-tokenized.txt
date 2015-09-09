@@ -1,0 +1,5 @@
+How to avoid the form being submitted after displaying alert ?
+If the user name and password does not match it displays a alert but if i click ok to the alert the form is logged in.Can any one tell me how to avoid it ? Thanks .
+
+Change the end of your function to
+Best not do it like that . If the form is submitted without a button click ( eg . in various circumstances when Enter is pressed ) , your validation won't execute . The best place to put validation is in a form.onsubmit event handler . eg . : lose the onclick in the source and put the test on the form programmatically : You are of course aware that client-side password checking is fruitless .

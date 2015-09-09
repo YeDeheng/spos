@@ -1,0 +1,11 @@
+Obtaining in IE the length of a Java array passed from an applet to its Javascript wrapper
+I have the following method in my applet : Which I call from Javascript as follows : This works in Firefox but IE gives me Any ideas anyone ?
+Knowing nothing about Java I can only ask if you've tried " for ( i in files ) { / * do stuff * / } "
+Don't you mean File [] ( not Files[] ) ? Other then that , it would help if you alert ( files ) . Also , if you have a javascript debugger ( DebugBar , for example ) that would help the most .
+@annakata : Yes , I've tried it . It doesn't work in either Firefox or IE . @laginimaineb : Corrected question . Thanks ! Also , alert ( files ) doesn't help much but I'm going to try kizzx2's suggestion below to peek into files ' structure .
+You can use Firebug Lite in IE to investigate what's going on with files First , include Firebug Lite in your file Now log it in the console with Now you can investigate what object was actually being returned by getFiles() I give this suggestion because IE said length is null not or not an object instead of files is null or not an object , so maybe files have other methods that you can use . Use Firebug to reflect those .
+Not sure how widely supported passing a Java array to javascript is . A workaround is to return the array as a delimited string as shown in the following example http://www.rgagnon.com/javadetails/java-0183.html
+Already seen this link . Approach is not viable since getFiles returns an array of non-string objects .
+I realise that , you build the string from the string attributes required from the File array , eg . the file path . you can then get the details required from the file using that path
+Work-around found . Instead of returning an array , return a list instead . Then iterate through it using the get and size methods . Works in both IE and Firefox . So , the applet method should be : And to use it Javascript-side :
+Should have checked https://developer.mozilla.org/en/LiveConnect first . Clearly stated there that arrays are dodgy in a certain LiveConnect version .

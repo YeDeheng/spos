@@ -1,0 +1,6 @@
+focusing_V the_D text_N field_N
+How_R to_P focus_V the_D calender_N after_P selecting_V the_D date_N from_P calender_G .._G I_O am_V selecting_V the_D date_N and_& calender_N is_V also_R closing_V but_& after_P that_D focus_N is_V missing_V ._. Please_! help_V me_O on_P this_D issue_N .._N Regards_V Sk_N
+which_D calender_N ?_.
+java_N or_& javascript_N ?_.
+It_O seriously_R depends_V on_P the_D calendar_N implementation_N you_O use_V ._. If_P the_D calendar_N is_V drown_V by_P Java_^ tag_N try_V to_P seek_V the_D onchange_A attribute_N and_& set_V it_O to_P :_:
+This_D appears_V to_P be_V JavaScript_^ code_N ,_, not_R Java_^ ._.

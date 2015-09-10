@@ -1,0 +1,8 @@
+render_V complex_A org_N chart_N similar_A javascript_N /_: flash_N /_: java_A graphic_A library_N
+i_G am_R looking_V for_P javascript_N /_: flash_N /_: java_A graphic_A lib_N ._. that_P able_A to_P render_V nicely_R a_D very_R complex_A relationship_N where_R one_$ node_N is_V relate_V to_P another_D node_N etc_N ._. for_P example_N a_D -->_P b_N --->_$ c_N b_N -->_P d_N ,_, e_G ,_, f_G any_D recommandation_N library_N ?_.
+So_R essentially_R you_O are_V looking_V for_P recommendations_N for_P a_D graph_N visualization_N library_N for_P Javascript_^ ,_, Flash_^ ,_, or_& Java_^ ?_.
+yes.i_N am_V looking_V for_P graph_N visualization_N lib_N
+what_O a_D cooincidence_N ,_, I_O was_V just_R looking_V into_P this_D myself_O ._. I_O found_V this_D :_: http://www.ryandesign.com/canviz_N http://code.google.com/p/canviz_N /_:
+Prefuse_^ is_V very_R cool_A and_& Java_^ based_V ._. Demo_^ here_R ._.
+This_D is_V the_D one_$ I_N use_N for_P Organizational_A chart_N http://code.google.com/apis/visualization/documentation/gallery/orgchart.html_N
+The_D Graphviz_^ open_A source_N graph_N visualization_N software_N is_V widely_R used_V to_P render_V graphs_N ,_, and_& jGraphviz_N is_V a_D binding_N for_P java_N ._.

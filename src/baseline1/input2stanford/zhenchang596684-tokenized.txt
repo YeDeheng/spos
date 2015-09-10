@@ -1,6 +1,0 @@
-How do I limit my date range on an Ajax Calendar ?
-I am using the ajax calendar tool . I like its function , but I would like to restrict the user to an option of selecting a time frame starting with Today , and ending with 6 months prior . How do I do this ?
-Which ajax calendar tool are you using . There are about 7000 out there . I've seen the ones from Yahoo ( YUI ) and a few others that take configurations for start and end dates where the user has to select something in between . If you're using a calendar that doesn't have that , you could add it by checking the date after the user selects and checking if that is outside your range . Then display a message and leave the calendar visable for them to pick again . ( Might be easier to switch to a calendar that already supports this though )
-You can use asp : comaparevalidator to check selected date .
-If you're using the asp.net calendar control , use the DayRender event to check each day against the date limit you wish to impose .
-Seems like something I should be looking at . How would I add this to my html page ?

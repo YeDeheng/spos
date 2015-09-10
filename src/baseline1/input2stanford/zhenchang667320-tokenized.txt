@@ -1,6 +1,0 @@
-Browser Java Plugin Detection
-What is the preferred method to determine if the Sun Java Plugin is installed in the browser ?
-java deployment toolkit script src= " http://java.com/js/deployJava.js " if ( deployJava.versionCheck('1 . 6 ')) { alert ( " 1.6 installed ") }
-this doesn't works always . ( 1 ) If its disabled in firefox it says not installed . ( 2 ) on lion os x , even when its disabled in all browsers , it tells installed
-This isn't an answer for your exact question but is offered as a solution for determining the browser itself . Don't be too harsh , this is really old code that I wrote some time ago .
-You may also consider PluginDetect script .

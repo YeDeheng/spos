@@ -1,6 +1,0 @@
-Why is Java giving me an IllegalArgumentException ?
-I'm using dwr and spring and I get this error : java.lang.IllegalArgumentException : Javascript name * is used by 2 classes I found nothing helpful on Google , do you know why I'm getting this error ?
-That is neither valid nor well-formed XML .
-Where is Java getting involved in this ? This is Javascript .
-Found . Because the version of the DWR's jar did not match the version of DWR's schema
-+1 for answering your own question

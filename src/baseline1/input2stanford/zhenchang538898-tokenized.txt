@@ -1,7 +1,0 @@
-Playing a sound notification using Google Web Toolkit
-Is it possible to play a sound notification using Google Web Toolkit which will be translated to Javascript ? Thanks .
-Yes it's possible , scriptaculous ( a js library ) has a sound.js which is an example of how to do it . The source is under 50 lines of code .
-Try using this library : http://code.google.com/p/gwt-voices /
-Since GWT 2.2 you can play audio with : com.google.gwt.media.client.Audio class . API : http://google-web-toolkit.googlecode.com/svn/javadoc/2.2/com/google/gwt/media/client/Audio.html Sample :
-where is the ` style ` folder ? Is it in the same directory as the . java file , or is it in the web directory ?
-@MarioStoilov its the URL , check http://www.gwtproject.org/javadoc/latest/com/google/gwt/media/client/MediaBase.html#setSrc(java.lang.String )

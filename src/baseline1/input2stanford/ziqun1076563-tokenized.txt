@@ -1,3 +1,0 @@
-Open an HttpURLConnection in a browser
-I am working on a jsp page which uses a bean to create an OAuth authenticated HttpURLConnection and am able to connect successfully . Is there anyway that I can take that open HttpURLConnection and somehow display the contents in a browser window ?
-The only way to display the contents of a stream from another web page in a jsp is if you do not get the output stream yourself . If I remember right , the output stream for a jsp is automatically retrieved when an output character outside the scriptlet tags is envountered by the parser . This would be better done in a servlet proper rather than a jsp . Just get the url connection , get the output stream and pipe it to the servlet's output stream using a loop .

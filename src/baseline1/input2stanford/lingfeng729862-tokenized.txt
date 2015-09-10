@@ -1,4 +1,0 @@
-Good Ajax framework for Java EE
-I'm relatively new to Java EE and I'm in need of a framework that will simplify AJAX for me . At the moment I have code that uses the dojo toolkit to draw a graph , but I'd like to have the graph updatable via AJAX . is there a good framework that allows me to do Ajax call backs and insert and run javascript into a page ? If so is there a good tutorial on how to use this framework ? My only experience with Ajax is using Telerik under ASP.Net .
-Dojo does AJAX too . Normally I'd recommend jQuery for this kind of thing but you're already using Dojo so you should probably use that . The two can be used together however , if desired .
-There are some JSF component libraries that got more or less ajax support . ICEfaces for example , makes all the standard components ajax'ish and offers server push techniques . Check out the jsfmatrix to get an overview .

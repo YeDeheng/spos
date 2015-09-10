@@ -1,8 +1,0 @@
-Communcation between Java and applet
-How do I get the ( updated ) value of Java Class's variable which is dynamically modified from an applet ? The problem here is , since the applet is loaded in separate class loaders the updated value is not available when the applet is loaded a second and subsequent times .
-Do you mean server side Java , or JavaScript as your tag indicate ?
-In fact simple desktop java .... java script is there to indicate the use of applet by the java script from an html page
-I'm not sure what you are trying to achieve - are there two classes , one in an applet and another , where ?
-Is this question still open ? If yes , please make clear what you want to do . Is your applet embedded in your desktop Java application , or in a web browser ?
-See Java-to-Javascript Communication , Java - Javascript interaction , and Interaction without LiveConnect for JavaScript interaction .
-See http://rostislav-matl.blogspot.com/2011/10/java-applets-building-with-maven.html for working example .

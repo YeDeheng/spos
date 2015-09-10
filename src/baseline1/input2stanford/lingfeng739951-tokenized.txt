@@ -1,3 +1,0 @@
-Which mechanism may be used to access Java methods which conflict with JavaScript keywords ?
-I've a Javascript source that uses a Java class that defines a " delete " method ( using jdk6 scripting ) . Since delete is a keyword , I cannot invoke that method . In JavaFX script any sequence of characters enclosed in > is treated as a lexical identifier . So you can use " insert " , that is a keyword , as an identifier : Javascript provides a way to protect keywords ?
-In javascript you would do :

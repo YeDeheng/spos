@@ -1,7 +1,0 @@
-unEscape JavaScript escaped value in JAVA
-in our web service we set a cookie through JavaScript wich we read again in Java ( Servlet ) however we need to escape the value of the cookie because it may contain illegal characters such as ' ' which messes up the cookie . is there a transparent way to escape ( JavaScript ) and unescape again ( JAVA ) for this ? thanks , Pieter Goddijn
-Define " transparent way " .
-In java you got StringEscapeUtils from Commons Lang to escape / unescape . In Javascript you escape through encodeURIComponent , but I think the Commons component I gave to you will satisfy your needs .
-If you want to decode from encodeURIComponent see here http://stackoverflow.com/questions/607176/java-equivalent-to-javascripts-encodeuricomponent-that-produces-identical-outpu
-Client JavaScript / ECMAScript : Server Java : I'll add further discoveries to my blog entry .
-The most accurate way would be to Excecute javascript withing your java code . Hope the code below helps .

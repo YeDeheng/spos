@@ -1,7 +1,0 @@
-URL decoding in Javascript
-I want to decode a string that has been encoded using the java.net.URLEncoder.encode() method . I tried using the unescape() function in javascript , but a problem occurs for blank spaces because java.net.URLEncoder.encode() converts a blank space to ' + ' but unescape() won't convert ' + ' to a blank space .
-Try decodeURI ( "") or decodeURIComponent ( "") ! - )
-Just because it takes a string as argument ! - )
-Using JavaScript's escape / unescape function is almost always the wrong thing , it is incompatible with URL-encoding or any other standard encoding on the web . Non-ASCII characters are treated unexpectedly as well as spaces , and older browsers don't necessarily have the same behaviour . As mentioned by roenving , the method you want is decodeURIComponent() . This is a newer addition which you won't find on IE 5.0 , so if you need to support that browser ( let's hope not , nowadays ! ) you'd need to implement the function yourself . And for non-ASCII characters that means you need to implement a UTF-8 encoder . Code is available if you need it .
-decodeURI[Component ] doesn't handle + as space either ( at least on FF3 , where I tested ) . Simple workaround : Indeed , unescape chokes on this URL : it knows only UTF-16 chars like %u2318 which are not standard ( see Percent-encoding ) .
-Try

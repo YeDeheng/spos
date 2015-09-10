@@ -1,7 +1,0 @@
-Rhino : restrict Java packages that can be accessed from JavaScript
-When embedding a JavaScript interpreter ( Rhino ) into a Java application ( to be able to script that application ) , how would one go about restricting the Java packages that are available to scripts ? For example , only " java.lang . * " should be accessible .
-A method for blocking access to certain packages and classes ( including through reflection ) in Rhino is described here . The important interface is ClassShutter which provides access control for Rhino's LiveConnect support .
-Ironically , the link to codeutopia.net about blocking access is returning 403 Forbidden for me
-how about just saying : java = undefined ; com = undefined ; Packages = undefined ; in an initial script which is loaded first .
-Interesting approach , probably works if you want to turn off * all * access to Java ( not just specific packages ) . On the other hand , you could probably still do ` obj.getClass() . forName ( " a.b.c.TheClass ") . newInstance() ` for any object that you have in the interpreter scope .
-@Thilo no if your objects are javascript objects ( which is what you should do )

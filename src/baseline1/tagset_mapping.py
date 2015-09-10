@@ -1,4 +1,5 @@
 import re
+import sys, os
 
 def replace_tagset(text, dic):
     for i, j in dic.iteritems():
@@ -55,10 +56,10 @@ REPS = {'_NN(?=[ \n])' : '_N',
 		'_SYM(?=[ \n])' : '_G', 
 		'_LS(?=[ \n])' : '_G'
 		}
- 
-infile = open('input.txt', 'r')
-outfile = open('output.txt', 'w')
-for line in infile: 
-	outfile.write(replace_tagset(line, REPS))
-infile.close()
-outfile.close()
+if __name__=='__main__': 
+	infile = open(sys.argv[1], 'r')
+	outfile = open(sys.argv[2], 'w')
+	for line in infile: 
+		outfile.write(replace_tagset(line, REPS))
+	infile.close()
+	outfile.close()

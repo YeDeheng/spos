@@ -1,6 +1,0 @@
-Gantt Chart - JavaScript / JSP / Java / Groovy / Grails
-I'm looking to add the ability to create a gantt chart to my web application . Currently my application is Grails based running on Tomcat . Research around SO seems to indicate that JFreeChart ( http://www.jfree.org/jfreechart ) and Google Charts both might provide me with the ability to create charts that I could mold into what I need . Before I went down that route , though , I wanted to see if there was something that is more specifically tailored to project management type charts . [ Edit : I am open to using JavaScript modules as well ]
-If you are not averse to Javascript , you could take a look at http://code.google.com/p/jsgantt /
-Wow . That's pretty slick . I'm definitely going to consider that .
-try : http://www.fusioncharts.com/free it is free ( and you can get commercial one ) it is flash based .. you can customized it from your gsp .
-Have a look at http://www.bryntum.com/products/gantt . 100% JavaScript based on ExtJS , not free though . DISCLAIMER : I wrote it .

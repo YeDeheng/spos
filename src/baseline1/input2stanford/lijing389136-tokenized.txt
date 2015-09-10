@@ -1,3 +1,0 @@
-Netbeans intellisense for Yahoo utils
-In netbeans I created an html page in which I am using Yahoo utils . If I type " yahoo . " then namespace , render , hide are not visible in the interactive documentation . Please tell me how to configure Netbeans to handle this .
-I don't use Netbeans , but I do know that Javascript is case-senstive , and that the global Yahoo object is YAHOO , not yahoo . So try it in all caps .

@@ -44,8 +44,7 @@ def transform_golden(istring, ostring):
 
 
 if __name__=='__main__':
-	try:
-		transform_golden('golden.txt', 'golden_tran.txt')
-		print compare('output.txt', 'golden_tran.txt')
-	except:
-		print 'unknow error'
+	#transform_golden('golden.txt', 'golden_tran.txt')
+	#print compare('output.txt', 'golden_tran.txt')	
+	#transform_golden('zhenchang5.automatic_tags', 'golden_tran.txt')
+	print compare('zhenchang5.automatic_tags.ST.mapped', 'golden_tran.txt')

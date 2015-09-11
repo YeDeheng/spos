@@ -1,3 +1,0 @@
-How to ignore imported external javascript in JSF
-  I have an xhtml page loading an external javascript by using      script src="   external url   " type="text/javascript"      /script         Is there a way to make JSF not care about the output of the script? I'd like to know this because the JSF SAXCompiler is throwing exceptions because of it:    
-Just asking, does the exception happen if you remove the script tag too? Maybe the problem is not with the script itself but with the url it references. Can you also post the true script importing line?

@@ -1,4 +1,0 @@
-123	a = b	D G V
-123	that's my fault	L D N
-123	that is faulty	O V A
-123	it's my fault	L D N

@@ -6,22 +6,31 @@ def compare(istring1, istring2):
 	tags_test = []
 	tags_gold = []
 	for line in test:
-		tag = line.split()[1]
-		tags_test.append(tag)
+		if line != '\n':
+			line = line.rstrip()
+			tag = line.split('\t')[1]
+			tags_test.append(tag)
 	for line in gold:
-		tag = line.split()[1]
-		tags_gold.append(tag)
+		if line != '\n':
+			line = line.rstrip()
+			tag = line.split('\t')[1]
+			tags_gold.append(tag)
 
 	if len(tags_test) == len(tags_gold):
 		equals = 0
 		total = 0
+		proper_noun_count = 0
 		for i, j in zip(tags_test, tags_gold):
+			if j == '^':
+				proper_noun_count += 1
 			if j in mapped_tag_list:
 				total += 1
 				if i == j:
 					equals += 1
+	print "#proper_noun_count is: ", proper_noun_count
 	print (equals, total)
 	return equals/float(total)
+
 def transform_golden(istring, ostring):
 	ifile = open(istring, 'r')
 	ofile = open(ostring, 'w')
@@ -33,7 +42,11 @@ def transform_golden(istring, ostring):
 		for token, tag in zip(tokens, tags):
 			ofile.write(token+'\t'+tag+'\n')
 if __name__=='__main__':
+	try:
+		print compare('sample-output.txt', 'golden_tran.txt')	
+	except Exception, e :
+		print e	
+		raise
 	#transform_golden('sample-golden.txt', 'golden_tran.txt')
-	print compare('sample-output.txt', 'golden_tran.txt')	
 	# #transform_golden('zhenchang5.automatic_tags', 'golden_tran.txt')
 	# print compare('zhenchang5.automatic_tags.ST.mapped', 'golden_tran.txt')

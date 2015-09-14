@@ -6531,7 +6531,7 @@ time	N
 .	.
 
 Script	N
-#_#
+#	#
 JSC	^
 cappuccino	G
 (	G
@@ -28466,7 +28466,7 @@ from	P
 ddaa	A
 import	N
 wit	N
-#_#
+#	#
 I	O
 wish	V
 I	O

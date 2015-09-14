@@ -40025,7 +40025,6 @@ who	O
 are	V
 starting	V
 out	T
-	,
 joining	V
 the	D
 team	N
@@ -55856,7 +55855,6 @@ $	C
 (	,
 '	,
 #comment	C
-	,
 :	,
 commentBody	C
 ')	,
@@ -58533,9 +58531,6 @@ the	D
 browser	N
 ?	,
 
-age	java
-nization	this
-Error	doesn't
 This	D
 isn't	V
 an	D
@@ -58877,8 +58872,6 @@ tree	N
 to	P
 JavaScript	^
 
-nization	ok
-Error	,
 What	O
 you're	L
 describing	V
@@ -59207,8 +59200,6 @@ the	D
 box	N
 .	,
 
-nization	If
-Error	you're
 Detecting	V
 EOF	^
 /	,
@@ -59310,8 +59301,6 @@ being	V
 connected	V
 .	,
 
-nization	Wouldn't
-Error	the
 Seems	V
 a	D
 bit	R
@@ -61183,19 +61172,16 @@ this	D
 src	C
 =[	C
 '	C
-	C
 "	C
 ]	C
 (	C
 [^	C
 '	C
-	C
 "	C
 ]*	C
 )	C
 [	C
 '	C
-	C
 "	C
 ][^	C
 >	C
@@ -64019,12 +64005,10 @@ print	G
 encodeURIComponent	G
 (	G
 '	G
-	G
 "	G
 A	G
 "	G
 B	G
-	G
 "'))")	G
 ;	G
 }	G
@@ -71118,7 +71102,6 @@ Token.NAME	C
 ;	,
 }	,
 
-	R
 :	P
 campaign	V
 and	^
@@ -71469,7 +71452,6 @@ See	^
 http://code.google.com/apis/gdata/articles/using_cURL.html	N
 and	,
 http://code.google.com/apis/analytics/docs/gdata/1.0/gdataProtocol.html	V
-	P
 java	O
 or	V
 servlet	V

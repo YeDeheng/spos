@@ -1,5 +1,5 @@
-f1 = open('golden-all.txt', 'r')
-f2 = open('train-all.txt', 'w')
+f1 = open('golden-3.txt', 'r')
+f2 = open('train-3.txt', 'w')
 for line in f1:
   elem = line.split('\t')
   tokens = elem[0].split(' ')

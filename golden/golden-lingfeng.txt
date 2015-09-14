@@ -95,7 +95,6 @@ thanks for letting me know :)	N P V O V E
 Launching a desktop application from a web site	V D N N P D N N
 Is it feasible to launch an application via a browser / URL ? What are the options for doing this ? I know the way to do it with IE and Windows ( which usually doesn't work ) . Ideally , I would like this to be browser independent . Our application is RCP , so in theory Java Web Start could work , we would just have to do some significant changes to how we deliver our application to users , which I would like to avoid . Our web server code is currently all Java if that makes a difference . I pretty much gave up on this until I clicked a url on Apple's site , which in turn launched iTunes . How does Apple do that ?	V O A P V D N P D N , ^ , O V D N P V D , O V D N P V O P ^ & ^ , O R V V , , R , O V P D P V N A , D N V ^ , R P N ^ N N V V , O V R V P V D A N P R O V D N P N , D O V V P V , D N N N V R D ^ P O V D N , O R R V T P D P O V D ^ P Z N , D P V V ^ , R V ^ V O ,
 If this is OS independent , then you can't rely on any specific program being available . What kind of program would you want to launch anyway ?	P D V ^ A , R O V V P D A N V A , D N P N V O V P N R ,
-Tokenization/iTun Error/registe	G G
 Silverlight 3 and Adobe Air will let you launch applications outside the browser .	^ $ & ^ N V V O V N P D N ,
 Is ext js compatible with . jsp , java backend ?	V ^ ^ A P G ^ , ^ N ,
 Is ext js compatible with . jsp , java backend ?	V ^ ^ A P G ^ , ^ N ,

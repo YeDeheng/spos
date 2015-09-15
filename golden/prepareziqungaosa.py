@@ -22,5 +22,5 @@ def transform_golden(istring, ostring):
 # f1.close()
 # f2.close()
 # f.close()
-transform_golden('golden-ziqun.txt', 'train_sep15.conll')
-transform_golden('golden-gaosa.txt', 'eval_sep15.conll')
+transform_golden('golden-liuyi.txt', 'train_sep15_part2.conll')
+transform_golden('golden-xuejiao.txt', 'eval_sep15_part2.conll')

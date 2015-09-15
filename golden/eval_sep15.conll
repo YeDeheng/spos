@@ -58,7 +58,7 @@ I	O
 know	V
 ,	,
 but	&
-let's	L
+let's	V
 presume	V
 that	D
 setup	N
@@ -107,7 +107,7 @@ JavaScript	^
 :	,
 Running	V
 the	D
-above	P
+above	A
 JavaScript	^
 results	N
 in	P
@@ -292,7 +292,7 @@ no	D
 ActiveX	^
 )	,
 .	,
-Please	R
+Please	V
 share	V
 your	D
 experiences	N
@@ -1018,7 +1018,7 @@ server	N
 component	N
 is	V
 not	R
-required	A
+required	V
 .	,
 It	O
 is	V
@@ -1034,7 +1034,7 @@ not	R
 work	V
 on	P
 Apple	^
-mobile	N
+mobile	A
 devices	N
 ,	,
 which	O
@@ -1068,7 +1068,7 @@ soon	R
 Write	V
 a	D
 Servlet	^
-that	P
+that	D
 Talks	V
 to	P
 JMS	^
@@ -1086,7 +1086,7 @@ am	V
 building	V
 a	D
 site	N
-that	P
+that	D
 uses	V
 a	D
 simple	A
@@ -1179,7 +1179,7 @@ page	N
 But	&
 I'm	L
 not	R
-sure	R
+sure	A
 how	R
 to	P
 do	V
@@ -1296,7 +1296,7 @@ Stateful	A
 Session	N
 EJB	^
 )	,
-when	O
+when	R
 messages	N
 come	V
 in	T
@@ -1419,7 +1419,7 @@ ActiveMQ	^
 web	N
 samples	N
 which	D
-show	N
+show	V
 how	R
 to	P
 do	V
@@ -1443,12 +1443,12 @@ As	P
 James	^
 Strachan	^
 says	V
--	G
+-	,
 http://activemq.apache.org/ajax.html	U
 is	V
 an	D
 ideal	A
-out-of-the-box	N
+out-of-the-box	A
 solution	N
 for	P
 your	D
@@ -1481,7 +1481,7 @@ request	N
 .	,
 Consider	V
 using	V
-Spring	N
+Spring	^
 JMS	^
 template	N
 for	P
@@ -1498,10 +1498,10 @@ the	D
 message	N
 in	P
 the	D
-Servlet	^
-doGet	N
+Servlet	N
+doGet	^
 /	,
-doPost	N
+doPost	^
 method	N
 .	,
 Consider	V
@@ -7335,7 +7335,7 @@ uses	V
 a	D
 simple	A
 AJAX	^
-Servlet	^
+Servlet	N
 to	P
 talk	V
 JMS	^
@@ -7366,7 +7366,7 @@ for	P
 data	N
 .	,
 The	D
-Servlet	^
+Servlet	N
 processes	V
 the	D
 Get	N
@@ -7385,7 +7385,7 @@ how	R
 to	P
 connect	V
 my	D
-Servlet	^
+Servlet	N
 into	P
 my	D
 ActiveMQ	^
@@ -7828,9 +7828,9 @@ servlet	N
 so	R
 in	P
 your	D
-doGet	N
+doGet	^
 /	,
-doPost	N
+doPost	^
 method	N
 you	O
 can	V
@@ -8018,7 +8018,7 @@ There	X
 are	V
 three	$
 technologies	N
-that	P
+that	D
 together	R
 solve	V
 all	X
@@ -8055,7 +8055,7 @@ JavaScript	^
 on	P
 the	D
 client	N
-front-end	A
+front-end	N
 
 You'll	L
 find	V
@@ -8186,7 +8186,7 @@ How	R
 to	P
 conduct	V
 blackbox	N
-testing	V
+testing	N
 on	P
 an	D
 AJAX	^

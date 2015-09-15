@@ -1,4 +1,4 @@
-mapped_tag_list = ['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
+mapped_tag_list = ['G']#['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
 def compare(istring1, istring2):
 	test = open(istring1, 'r')
 	gold = open(istring2, 'r')
@@ -42,11 +42,11 @@ def transform_golden(istring, ostring):
 		for token, tag in zip(tokens, tags):
 			ofile.write(token+'\t'+tag+'\n')
 if __name__=='__main__':
+	transform_golden('sample-golden.txt', 'golden_tran.txt')
 	try:
 		print compare('sample-output.txt', 'golden_tran.txt')	
 	except Exception, e :
 		print e	
 		raise
-	#transform_golden('sample-golden.txt', 'golden_tran.txt')
 	# #transform_golden('zhenchang5.automatic_tags', 'golden_tran.txt')
 	# print compare('zhenchang5.automatic_tags.ST.mapped', 'golden_tran.txt')

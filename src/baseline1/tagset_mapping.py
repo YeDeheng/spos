@@ -57,8 +57,8 @@ REPS = {'_NN(?=[ \n])' : '_N',
 		'_LS(?=[ \n])' : '_G'
 		}
 if __name__=='__main__': 
-	infile = open(sys.argv[1], 'r')
-	outfile = open(sys.argv[2], 'w')
+	infile = open('input_tagsetmap.txt', 'r')
+	outfile = open('output_tagsetmap.txt', 'w')
 	for line in infile: 
 		outfile.write(replace_tagset(line, REPS))
 	infile.close()

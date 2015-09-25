@@ -69,7 +69,7 @@ discussion	N
 .	.
 I	O
 started	V
-out	R
+out	T
 planning	N
 on	P
 using	V
@@ -658,7 +658,7 @@ quick	A
 Google	^
 search	N
 brings	V
-up	R
+up	T
 documentation	N
 for	P
 Flash	A
@@ -673,7 +673,7 @@ that	D
 Flash	V
 CS4	N
 is	V
-out	R
+out	T
 soon	R
 ,	,
 might	V
@@ -725,7 +725,7 @@ do	V
 what	O
 you	O
 want	V
-over	R
+over	T
 on	P
 Moodle	G
 (	G
@@ -1299,7 +1299,7 @@ EJB	N
 when	R
 messages	N
 come	V
-in	R
+in	T
 .	.
 Then	R
 the	D
@@ -1365,7 +1365,7 @@ right	A
 path	N
 to	P
 look	V
-down	R
+down	T
 .	.
 Thanks	N
 for	P
@@ -2386,7 +2386,7 @@ a	D
 Though	P
 this	D
 relies	V
-on	R
+on	T
 that	P
 the	D
 character	N
@@ -2471,7 +2471,7 @@ candidates	N
 are	V
 :	:
 Whip	N
-up	R
+up	T
 my	D
 own	A
 language	N
@@ -2792,7 +2792,7 @@ more	R
 likely	A
 to	P
 stick	V
-around	R
+around	T
 .	.
 http://www.beanshell.org	N
 /	:
@@ -2958,7 +2958,7 @@ prejudices	N
 can	V
 easily	R
 pick	V
-up	R
+up	T
 the	D
 Tcl	^
 syntax	N
@@ -4033,7 +4033,7 @@ giving	V
 you	O
 a	D
 vote	N
-up	R
+up	T
 ,	,
 just	R
 for	P
@@ -4371,7 +4371,7 @@ file	N
 only	R
 to	P
 find	V
-out	R
+out	T
 it	O
 was	V
 too	R
@@ -5009,7 +5009,7 @@ wicket's	N
 system	N
 by	P
 printing	V
-out	R
+out	T
 getCallbackScript()	N
 .	.
 toString()	N
@@ -5045,7 +5045,7 @@ wicket-	G
 ajax.js	G
 .	.
 Check	V
-out	R
+out	T
 the	D
 mailing	N
 list	N
@@ -5369,7 +5369,7 @@ confirmation	N
 dialog	N
 that	D
 comes	V
-up	R
+up	T
 ,	,
 or	&
 to	P
@@ -5461,7 +5461,7 @@ with	P
 null	N
 before	P
 continuing	V
-on	R
+on	T
 from	P
 the	D
 page	N
@@ -5481,7 +5481,7 @@ page	N
 I	O
 didn't	V
 end	V
-up	R
+up	T
 doing	V
 this	D
 (	$
@@ -5493,7 +5493,7 @@ that	P
 I	O
 was	V
 better	A
-off	R
+off	T
 using	V
 a	D
 regular	A
@@ -5609,7 +5609,7 @@ the	D
 onbeforeunload	A
 handler	N
 brings	V
-up	R
+up	T
 a	D
 prompt	A
 if	P
@@ -5697,7 +5697,7 @@ the	D
 prompt	A
 to	P
 come	V
-up	R
+up	T
 at	P
 all	D
 because	P
@@ -5960,7 +5960,7 @@ I'd	N
 say	V
 this	D
 comes	V
-down	R
+down	T
 to	P
 data	N
 grids	N
@@ -5989,7 +5989,7 @@ this	D
 It	O
 really	R
 comes	V
-down	R
+down	T
 to	P
 what	O
 platform	N
@@ -6114,7 +6114,7 @@ services	N
 .	.
 
 Check	V
-out	R
+out	T
 SpreadsheetGear	^
 ,	,
 as	P
@@ -6163,7 +6163,7 @@ may	V
 want	V
 to	P
 check	V
-out	R
+out	T
 Telerik	^
 as	P
 people	N
@@ -6181,7 +6181,7 @@ control	N
 .	.
 
 Check	V
-out	R
+out	T
 ZK	^
 Spreadsheet	^
 its	D
@@ -6637,7 +6637,7 @@ just	R
 have	V
 to	P
 figure	V
-out	R
+out	T
 how	R
 to	P
 bind	V
@@ -6767,7 +6767,7 @@ seemed	V
 to	P
 kill	V
 it	O
-off	R
+off	T
 ...	:
 )	N
 so	R
@@ -7060,7 +7060,7 @@ Javascript	N
 
 I'm	N
 wrapping	V
-up	R
+up	T
 a	D
 Javascript	^
 widget	N
@@ -7117,7 +7117,7 @@ want	V
 GridAjaxBehavior	^
 to	P
 spit	V
-back	R
+back	T
 some	D
 XML	N
 when	R
@@ -7140,7 +7140,7 @@ GridAjaxBehaviour	^
 do	V
 to	P
 spit	V
-back	R
+back	T
 the	D
 XML	N
 ?	.
@@ -7543,7 +7543,7 @@ EJB	N
 when	R
 messages	N
 come	V
-in	R
+in	T
 .	.
 Then	R
 the	D
@@ -7609,7 +7609,7 @@ right	A
 path	N
 to	P
 look	V
-down	R
+down	T
 .	.
 Thanks	N
 for	P
@@ -8329,7 +8329,7 @@ be	V
 brittle	A
 .	.
 Check	V
-out	R
+out	T
 this	D
 talk	N
 by	P
@@ -8572,7 +8572,7 @@ code	N
 that	P
 I	O
 left	V
-out	R
+out	T
 for	P
 simplicity	N
 .	.
@@ -8654,7 +8654,7 @@ approach	N
 you	O
 will	V
 end	V
-up	R
+up	T
 using	V
 DWR's	N
 generated	V
@@ -8722,7 +8722,7 @@ proxy	N
 that	D
 can	V
 link	V
-in	R
+in	T
 with	P
 DWR	^
 .	.
@@ -9135,7 +9135,7 @@ Edit	^
 I	O
 should	V
 point	V
-out	R
+out	T
 that	P
 the	D
 version	N
@@ -9475,7 +9475,7 @@ thing	N
 I	O
 would	V
 watch	V
-out	R
+out	T
 for	P
 is	V
 that	P
@@ -9518,7 +9518,7 @@ your	D
 clients	N
 will	V
 end	V
-up	R
+up	T
 creating	V
 more	A
 HTTP	N
@@ -9631,7 +9631,7 @@ and	&
 you	O
 can	V
 end	V
-up	R
+up	T
 with	P
 huge	A
 numbers	N
@@ -10239,7 +10239,7 @@ I	O
 am	V
 helping	V
 someone	N
-out	R
+out	T
 with	P
 a	D
 javascript-based	A
@@ -10352,7 +10352,7 @@ the	D
 desired	V
 data	N
 passed	V
-in	R
+in	T
 as	P
 a	D
 String	^
@@ -10779,7 +10779,7 @@ could	V
 help	V
 -	:
 check	V
-out	R
+out	T
 theonline	A
 demo	N
 since	P
@@ -11039,7 +11039,7 @@ are	V
 you	O
 writing	V
 it	O
-out	R
+out	T
 using	V
 a	D
 JSP	^
@@ -11567,7 +11567,7 @@ me	O
 :	:
 
 Check	V
-out	R
+out	T
 moment.js	N
 !	.
 It's	N
@@ -12548,7 +12548,7 @@ when	R
 the	D
 Applet	^
 starts	V
-up	R
+up	T
 
 Split	G
 java	G
@@ -13381,7 +13381,7 @@ should	V
 probably	R
 head	V
 on	P
-over	R
+over	T
 to	P
 RentACoder	V
 :-)	N
@@ -13690,7 +13690,7 @@ representing	V
 the	D
 objects	N
 passed	V
-on	R
+on	T
 from	P
 a	D
 controller	N

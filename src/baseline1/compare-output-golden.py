@@ -1,4 +1,4 @@
-mapped_tag_list = ['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$']
+mapped_tag_list = ['X'] #['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
 def compare(istring1, istring2):
 	test = open(istring1, 'r')
 	gold = open(istring2, 'r')

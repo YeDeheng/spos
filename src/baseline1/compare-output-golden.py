@@ -1,4 +1,4 @@
-mapped_tag_list = ['X'] #['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
+mapped_tag_list = ['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
 def compare(istring1, istring2):
 	test = open(istring1, 'r')
 	gold = open(istring2, 'r')
@@ -21,9 +21,9 @@ def compare(istring1, istring2):
 		total = 0
 		proper_noun_count = 0
 		for i, j in zip(tags_test, tags_gold):
-			if j == '^':
-				proper_noun_count += 1
-			if j in mapped_tag_list:
+			# if j == '^':
+			# 	proper_noun_count += 1
+			# if j in mapped_tag_list:
 				total += 1
 				if i == j:
 					equals += 1

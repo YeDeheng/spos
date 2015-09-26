@@ -1,4 +1,4 @@
-mapped_tag_list = ['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
+mapped_tag_list = ['R'] #['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
 def compare(istring1, istring2):
 	test = open(istring1, 'r')
 	gold = open(istring2, 'r')
@@ -8,6 +8,7 @@ def compare(istring1, istring2):
 	for line in test:
 		if line != '\n':
 			line = line.rstrip()
+			#print line
 			tag = line.split('\t')[1]
 			tags_test.append(tag)
 	for line in gold:
@@ -23,7 +24,7 @@ def compare(istring1, istring2):
 		for i, j in zip(tags_test, tags_gold):
 			# if j == '^':
 			# 	proper_noun_count += 1
-			# if j in mapped_tag_list:
+			if j in mapped_tag_list:
 				total += 1
 				if i == j:
 					equals += 1

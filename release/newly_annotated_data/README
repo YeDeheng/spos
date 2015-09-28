@@ -1,0 +1,5 @@
+We recruited 6 more people all from computer science background to annotate a larger software engineering corpus. The raw data is still from Stack Overflow. The newly annotated corpus has 1,008 Stack Overflow posts (questions, answers, comments). 
+
+The naming of the annotated file is "golden-XXX.txt". We do not provide these annotators' full names, since we are submitting papers to conferences with "double blind review" policy. 
+
+A format converter written in Python is also released. It converts "golden-XXX.txt" to CONLL format. 

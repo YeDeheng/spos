@@ -1,4 +1,4 @@
-mapped_tag_list = ['R'] #['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$', 'G']
+mapped_tag_list = ['!'] #['O', 'N', '^', 'V', 'A', 'R', '!', 'D', 'P', 'T', 'X', '&', '$']
 def compare(istring1, istring2):
 	test = open(istring1, 'r')
 	gold = open(istring2, 'r')
@@ -22,8 +22,8 @@ def compare(istring1, istring2):
 		total = 0
 		proper_noun_count = 0
 		for i, j in zip(tags_test, tags_gold):
-			# if j == '^':
-			# 	proper_noun_count += 1
+			if j == '^':
+				proper_noun_count += 1
 			if j in mapped_tag_list:
 				total += 1
 				if i == j:
@@ -45,7 +45,8 @@ def transform_golden(istring, ostring):
 if __name__=='__main__':
 	#transform_golden('sample-golden.txt', 'golden_tran.txt')
 	try:
-		print compare('sample-output.txt', 'golden_tran.txt')	
+		print compare('sample-output_pre.txt', 'golden_tran.txt')	
+		#print compare('sample-output_re.txt', 'golden_tran.txt')	
 		print compare('pred.txt', 'golden_tran.txt')	
 	except Exception, e :
 		print e	
